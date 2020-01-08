@@ -17,13 +17,24 @@ $white:#fff;
 
 @mixin titlebase {
     width: 350px;
-    height: 70px;
+    height: 80px;
     color: $orange;
     border: 3px solid $l-brown;
     text-align: center;
     margin: 0 auto;
-}
 
+    h2 {
+        margin-top: 8px;
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    p {
+        margin-top: 8px;
+        font-weight: bold;
+        font-size: 1.0rem;
+    }
+}
 
 // 全体共通
 body {
@@ -44,11 +55,44 @@ ul {
     height: 200px;
     background-color: $l-orange;
 
+    &__wave {
+        padding-bottom: 35px;
+        position: relative;
+        background-color: $orange;
+        display: block;
+        height: 10px;
+
+    }
+
+    &__wave::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: repeat;
+        height: 10px;
+        background-size: 20px 20px;
+        background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
+    }
+
+    &__wave::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: repeat;
+        height: 15px;
+        background-size: 20px 20px;
+        background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
+    }
+
     &__sublogo {
         width: 380px;
         color: $brown;
         font-size: 1.6rem;
-        padding: 10px 0 5px;
+        padding: 0 0 5px;
     }
 
     &__logo {
@@ -141,6 +185,11 @@ ul {
 
 // 帯
 .bar {
+    padding-bottom: 10px;
+    position: relative;
+    background-color: $orange;
+    display: block;
+    height: 10px;
     background-color: $orange;
     display: flex;
     justify-content: center;
@@ -155,10 +204,37 @@ ul {
     }
 }
 
+.bar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
+}
+
+.bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
+}
+
 // メイン
 // サービス
 .service {
-    height: 1000px;
+    height: 980px;
+    padding-bottom: 0px;
+    position: relative;
+    display: block;
 
 
     &__title {
@@ -173,25 +249,24 @@ ul {
 
             &__title {
                 text-align: center;
-                margin-top: 30px;
-                font-size: 1.6rem;
+                margin-top: 38px;
+                font-size: 1.8rem;
                 color: $l-orange;
             }
 
             &__price {
                 display: block;
-                width: 180px;
-                height: 80px;
                 position: absolute;
                 bottom: 0;
                 right: 0;
 
                 &__bar {
                     padding: 15px;
+                    border: 3px solid $l-brown;
                     background-color: $l-orange;
                     color: $l-brown;
+                    font-weight: bold;
                     font-size: 2.2rem;
-
                     text-align: center;
                 }
             }
@@ -210,15 +285,15 @@ ul {
         }
 
         &__topic:nth-child(1) {
-            background-image: url("../images/serviceimg01.png");
+            background-image: url("../images/s-img01.png");
         }
 
         &__topic:nth-child(2) {
-            background-image: url("../images/serviceimg02.png");
+            background-image: url("../images/s-img02.png");
         }
 
         &__topic:nth-child(3) {
-            background-image: url("../images/serviceimg03.png");
+            background-image: url("../images/s-img03.png");
         }
     }
 
@@ -226,6 +301,7 @@ ul {
         display: flex;
         justify-content: space-between;
         height: 350px;
+        margin-bottom: 20px;
 
         &__topic {
             width: 300px;
@@ -235,24 +311,50 @@ ul {
         }
 
         &__topic:nth-child(1) {
-            background-image: url("../images/serviceimg04.png");
+            background-image: url("../images/s-img04.png");
         }
 
         &__topic:nth-child(2) {
-            background-image: url("../images/serviceimg05.png");
+            background-image: url("../images/s-img05.png");
         }
 
         &__topic:nth-child(3) {
-            background-image: url("../images/serviceimg06.png");
+            background-image: url("../images/s-img06.png");
         }
     }
 
     &__para {
         text-align: center;
+        font-size: 2.8rem;
+        padding-bottom: 50px;
     }
 }
 
 
+
+    .service::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: repeat;
+        height: 10px;
+        background-size: 20px 20px;
+        background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
+    }
+
+    .service::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: repeat;
+        height: 15px;
+        background-size: 20px 20px;
+        background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
+    }
 // ガイド
 .guide {
     height: 700px;
