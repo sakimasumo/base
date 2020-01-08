@@ -8,6 +8,7 @@ $brown:#4b4539;
 $l-brown:#b78d4a;
 $green:#83b33c;
 $white:#fff;
+$clear:rgba(0, 0, 0, 0.0);
 
 @mixin btn {
     background-color: $green;
@@ -41,6 +42,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+
 ul {
     list-style: none;
 }
@@ -52,8 +54,9 @@ ul {
 
 // ヘッダー
 .glheader {
-    height: 200px;
     background-color: $l-orange;
+    position: relative;
+    display: block;
 
     &__wave {
         padding-bottom: 35px;
@@ -88,25 +91,36 @@ ul {
         background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
     }
 
+    &__space {
+        display: block;
+        height: 200px;
+    }
+
     &__sublogo {
         width: 380px;
         color: $brown;
         font-size: 1.6rem;
         padding: 0 0 5px;
+        float: left;
     }
 
     &__logo {
         width: 380px;
         height: 150px;
-        background-color: #aaa;
+        background-color: $clear;
         float: left;
+        clear: both;
     }
 
     &__box {
         float: right;
-        height: 100px;
         width: 380px;
-        margin-bottom: 50px;
+        margin-top: 5px;
+        margin-bottom: 35px;
+        padding: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+        background-color: $white;
+
 
         &__tel {
             display: flex;
@@ -161,15 +175,40 @@ ul {
     }
 }
 
+.glheader::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-color:$clear;
+
+    background-image: radial-gradient(circle at 10px 15px, $clear 12px, transparent 13px);
+}
+
+.glheader::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background:transparent url('image.png') left top no-repeat;
+}
+
+
 
 // トップイメージ
 .topimage {
     height: 600px;
     position: relative;
-
+    display: block;
+&__area {
+    position: relative;
     &__hero {
         height: 600px;
-        // width: 990px;
+        // // width: 990px;
         background-image: url("../images/hero.png");
     }
 
@@ -178,8 +217,34 @@ ul {
         font-size: 2.4rem;
         position: absolute;
         top: 40px;
+}
         left: 40px;
     }
+
+}
+.topimage::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $orange 13px);
+
+}
+
+.topimage::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
 
 }
 
@@ -332,35 +397,40 @@ ul {
 
 
 
-    .service::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-repeat: repeat;
-        height: 10px;
-        background-size: 20px 20px;
-        background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
-    }
+.service::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
 
-    .service::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-repeat: repeat;
-        height: 15px;
-        background-size: 20px 20px;
-        background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
-    }
+}
+
+.service::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
+
+}
+
 // ガイド
 .guide {
     height: 700px;
     background-color: $l-orange;
     padding-top: 50px;
     margin-bottom: 50px;
+    position: relative;
+    display: block;
 
     &__area {
 
@@ -380,9 +450,37 @@ ul {
     }
 }
 
+.guide::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
+
+}
+
+.guide::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
+}
+
 // 連絡
 .contact {
-    height: 400px;
+    height: 300px;
+    padding-bottom: 50px;
+    position: relative;
+    display: block;
 
     &__area {
         height: 300px;
@@ -409,6 +507,32 @@ ul {
         }
     }
 }
+
+.contact::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $orange 13px);
+
+
+}
+
+.contact::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
+    }
 
 // トップに戻るボタン
 .topbtn {
