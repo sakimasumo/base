@@ -1,19 +1,37 @@
 @charset "UTF-8";
-$orange: #F89310;
-$white: #f5f5f5;
-$green: #5FBB00;
-$yellow: #FFF196;
-$black: #333;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
 
-html {
-    font-size: 62.5%;
+// color
+$l-orange: #FFEAC5;
+$orange: #F4810E;
+$brown:#4b4539;
+$l-brown:#b78d4a;
+$green:#83b33c;
+$white:#fff;
+
+@mixin btn {
+    background-color: $green;
+    color: $white;
+    // text-align: center;
 }
 
+@mixin titlebase {
+    width: 350px;
+    height: 70px;
+    color: $orange;
+    border: 3px solid $l-brown;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+// 全体共通
 body {
-    font-size: 1.6rem;
-    background-color: $yellow;
-    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
-    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+ul {
+    list-style: none;
 }
 
 .w {
@@ -21,66 +39,154 @@ body {
     margin: 0 auto;
 }
 
+// ヘッダー
 .glheader {
     height: 200px;
-    background-color: $orange;
+    background-color: $l-orange;
 
     &__sublogo {
-        color: $white;
-        font-size: 2.8rem;
-        font-weight: bold;
-        padding-top: 5px;
-        width: 420px;
+        width: 400px;
+        color: $brown;
+        font-size: 2rem;
+        padding-top: 10px;
+        margin-right: 0;
     }
+
     &__logo {
-      float: left;
-      margin: 0;
-      width: 420px;
+        width: 380px;
+        height: 150px;
+        background-color: #aaa;
+        float: left;
     }
-    &__telnumber ,&__mail{
-      display: block;
-      width: 390px;
-      height: 75px;
-      background-color: $green;
-      float: right;
-      border-radius: 5px;
-      margin-bottom: 8px;
+
+    &__box {
+        float: right;
+        height: 100px;
+        width: 380px;
+
+        &__tel {
+            font-size: 48px;
+            color: $orange;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: space-between;
+
+            &__contact {
+                width: 180px;
+                height: 50px;
+                @include btn;
+            }
+
+            &__faq {
+                width: 180px;
+                height: 50px;
+                @include btn;
+            }
+        }
+    }
+}
+
+
+// トップイメージ
+.topimage {
+    height: 600px;
+    position: relative;
+
+    &__catch {
+        color: $brown;
+        font-size: 2.4rem;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+}
+
+// 帯
+.bar {
+    background-color: $orange;
+    height: 100px;
+
+    &__catch {
+        color: $white;
+        text-align: center;
+    }
+}
+
+// メイン
+// サービス
+.service {
+    height: 1000px;
+
+    &__title {
+        @include titlebase background-color: $l-orange;
+    }
+
+    &__topics {
+        display: flex;
+        justify-content: space-between;
+        height: 300px;
+    }
+
+    &__para {
+        text-align: center;
+    }
+}
+
+// ガイド
+.guide {
+    height: 700px;
+    background-color: $l-orange;
+
+    &__title {
+        @include titlebase background-color: $white;
+    }
+
+    &__topics {
+        display: flex;
+        justify-content: space-between;
+
+        &__topic {
+            height: 420px;
+        }
+    }
+}
+// 連絡
+.contact {
+  height: 400px;
+  &__area {
+    height: 300px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    &__para {
       text-align: center;
     }
-}
-
-.top {
-  &__image {
-    height: 600px;
-    background-image: url("../images/hero.png");
-    position: relative;
-  }
-  &__logo {
-    height: 420px;
-    width: 530px;
-    background-image: url("../images/logo2.png");
-    position: absolute;
-    bottom: 40px;
-    right::40px;
-  }
-  &__subtitle {
-    width: 580px;
-    height: 95px;
-    color: $black;
-    font-size: 4.8rem;
-    font-weight: bold;
-    text-align: center;
-    position: absolute;
-    top: 40px;
-    left: 40px;
+    &__topics {
+      text-align: center;
+      width: 500px;
+      margin: 0 auto;
+      &__tel {
+        height: 90px;
+        @include btn
+      }
+      &__mail {
+        height: 90px;
+        @include btn
+      }
+    }
   }
 }
-
-.bar {
-  height: 150px;
+// トップに戻るボタン
+.topbtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background-color: $orange;
-  &__para {
-    color: $white;
-    text-align: center;
-  }
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
+// フッター
