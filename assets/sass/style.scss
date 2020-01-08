@@ -35,7 +35,7 @@ ul {
 }
 
 .w {
-    width: 1080px;
+    width: 990px;
     margin: 0 auto;
 }
 
@@ -45,11 +45,10 @@ ul {
     background-color: $l-orange;
 
     &__sublogo {
-        width: 400px;
+        width: 380px;
         color: $brown;
-        font-size: 2rem;
-        padding-top: 10px;
-        margin-right: 0;
+        font-size: 1.6rem;
+        padding: 10px 0 5px;
     }
 
     &__logo {
@@ -63,12 +62,32 @@ ul {
         float: right;
         height: 100px;
         width: 380px;
+        margin-bottom: 50px;
 
         &__tel {
-            font-size: 48px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 3.0rem;
             color: $orange;
             font-weight: bold;
             margin-bottom: 10px;
+
+            &__topic {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    text-align: center;
+                    width: 2.8rem;
+                    height: 2.8rem;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+            }
         }
 
         &__btn {
@@ -78,12 +97,20 @@ ul {
             &__contact {
                 width: 180px;
                 height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.3rem;
                 @include btn;
             }
 
             &__faq {
                 width: 180px;
                 height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.3rem;
                 @include btn;
             }
         }
@@ -96,6 +123,12 @@ ul {
     height: 600px;
     position: relative;
 
+    &__hero {
+        height: 600px;
+        // width: 990px;
+        background-image: url("../images/hero.png");
+    }
+
     &__catch {
         color: $brown;
         font-size: 2.4rem;
@@ -103,15 +136,21 @@ ul {
         top: 40px;
         left: 40px;
     }
+
 }
 
 // 帯
 .bar {
     background-color: $orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100px;
+    margin-bottom: 50px;
 
     &__catch {
         color: $white;
+        font-size: 2.4rem;
         text-align: center;
     }
 }
@@ -121,14 +160,91 @@ ul {
 .service {
     height: 1000px;
 
+
     &__title {
         @include titlebase background-color: $l-orange;
+        margin-bottom: 20px;
     }
 
-    &__topics {
+    &__topics1,
+    &__topics2 {
+        &__topic {
+            position: relative;
+
+            &__title {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 1.6rem;
+                color: $l-orange;
+            }
+
+            &__price {
+                display: block;
+                width: 180px;
+                height: 80px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                &__bar {
+                    padding: 15px;
+                    background-color: $l-orange;
+                    color: $l-brown;
+                    font-size: 2.2rem;
+
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__topics1 {
         display: flex;
         justify-content: space-between;
-        height: 300px;
+        height: 350px;
+        margin-bottom: 15px;
+
+        &__topic {
+            width: 300px;
+            height: 350px;
+        }
+
+        &__topic:nth-child(1) {
+            background-image: url("../images/serviceimg01.png");
+        }
+
+        &__topic:nth-child(2) {
+            background-image: url("../images/serviceimg02.png");
+        }
+
+        &__topic:nth-child(3) {
+            background-image: url("../images/serviceimg03.png");
+        }
+    }
+
+    &__topics2 {
+        display: flex;
+        justify-content: space-between;
+        height: 350px;
+
+        &__topic {
+            width: 300px;
+            height: 350px;
+            margin-bottom: 15px;
+
+        }
+
+        &__topic:nth-child(1) {
+            background-image: url("../images/serviceimg04.png");
+        }
+
+        &__topic:nth-child(2) {
+            background-image: url("../images/serviceimg05.png");
+        }
+
+        &__topic:nth-child(3) {
+            background-image: url("../images/serviceimg06.png");
+        }
     }
 
     &__para {
@@ -136,57 +252,77 @@ ul {
     }
 }
 
+
 // ガイド
 .guide {
     height: 700px;
     background-color: $l-orange;
+    padding-top: 50px;
+    margin-bottom: 50px;
 
-    &__title {
-        @include titlebase background-color: $white;
-    }
+    &__area {
 
-    &__topics {
-        display: flex;
-        justify-content: space-between;
+        &__title {
+            @include titlebase background-color: $white;
+            margin-bottom: 20px;
+        }
 
-        &__topic {
-            height: 420px;
+        &__topics {
+            display: flex;
+            justify-content: space-between;
+
+            &__topic {
+                height: 420px;
+            }
         }
     }
 }
+
 // 連絡
 .contact {
-  height: 400px;
-  &__area {
-    height: 300px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
-    &__para {
-      text-align: center;
+    height: 400px;
+
+    &__area {
+        height: 300px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+
+        &__para {
+            text-align: center;
+        }
+
+        &__topics {
+            text-align: center;
+            width: 500px;
+            margin: 0 auto;
+
+            &__tel {
+                height: 90px;
+                @include btn
+            }
+
+            &__mail {
+                height: 90px;
+                @include btn
+            }
+        }
     }
-    &__topics {
-      text-align: center;
-      width: 500px;
-      margin: 0 auto;
-      &__tel {
-        height: 90px;
-        @include btn
-      }
-      &__mail {
-        height: 90px;
-        @include btn
-      }
-    }
-  }
 }
+
 // トップに戻るボタン
 .topbtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: $orange;
-  display: block;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: $orange;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
+
 // フッター
+.glfooter {
+    height: 80px;
+    background-color: $orange;
+
+}
