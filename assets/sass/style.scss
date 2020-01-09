@@ -13,12 +13,12 @@ $clear:rgba(0, 0, 0, 0.0);
 @mixin btn {
     background-color: $green;
     color: $white;
-    border-radius: 20px 20px;
+    border-radius: 5px 5px;
     // text-align: center;
 }
 
 @mixin shadow {
-    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
 
 }
 
@@ -29,7 +29,7 @@ $clear:rgba(0, 0, 0, 0.0);
     border: 3px solid $l-brown;
     text-align: center;
     margin: 0 auto;
-    border-radius: 20px 20px;
+    border-radius: 5px 5px;
 
     @include shadow h2 {
         margin-top: 8px;
@@ -66,7 +66,7 @@ ul {
     position: relative;
     display: block;
 
-    &__wave {
+    &__top {
         padding-bottom: 35px;
         position: relative;
         background-color: $orange;
@@ -75,7 +75,7 @@ ul {
 
     }
 
-    &__wave::before {
+    &__top::before {
         content: "";
         position: absolute;
         left: 0;
@@ -87,7 +87,7 @@ ul {
         background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
     }
 
-    &__wave::after {
+    &__top::after {
         content: "";
         position: absolute;
         left: 0;
@@ -99,35 +99,36 @@ ul {
         background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
     }
 
-    &__space {
+    &__area {
         display: block;
-        height: 125px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
     }
 
-    &__sublogo {
-        width: 380px;
-        color: $brown;
-        font-size: 1.6rem;
-        padding: 0 0 5px;
-        float: left;
-    }
 
     &__logo {
-        width: 380px;
-        height: 150px;
-        background-color: $clear;
-        float: left;
-        clear: both;
+        text-indent: -9999px;
+        width: 180px;
+        height: 50px;
+        background: url("../images/headerlogo.png") 0 0 no-repeat;
+        background-size: contain;
+    }
+
+    &__catch {
+        width: 235px;
+        color: $brown;
+        font-size: 1.2rem;
     }
 
     &__box {
-        float: right;
-        width: 580px;
-        margin-bottom: 35px;
+        width: 510px;
         padding: 5px;
         background-color: $white;
         border: 3px solid $l-brown;
-        border-radius: 20px 20px;
+        border-radius: 5px 5px;
         @include shadow;
         display: flex;
 
@@ -135,7 +136,7 @@ ul {
         &__tel {
             display: flex;
             justify-content: space-between;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: $orange;
             margin: 0;
@@ -161,16 +162,17 @@ ul {
 
         &__btn {
             margin-left: 30px;
-            width: 320px;
+            width: 300px;
             display: flex;
             justify-content: space-between;
 
             &__contact {
-                width: 150px;
+                width: 140px;
                 height: 50px;
+                display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.3rem;
+                font-size: 1.0rem;
                 @include btn;
 
                 p {
@@ -179,11 +181,12 @@ ul {
             }
 
             &__faq {
-                width: 150px;
+                width: 140px;
                 height: 50px;
+                display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.3rem;
+                font-size: 1.0rem;
                 @include btn;
 
                 p {
@@ -228,24 +231,25 @@ ul {
 // トップイメージ
 .topimage {
     display: block;
-    height: 600px;
+    height: 660px;
 
     background: $white url("../images/heroimage.png") left bottom repeat-x;
-    height: 600px;
+    height: 660px;
 
     &__area {
         display: block;
-        height: 600px;
+        height: 660px;
         position: relative;
 
 
 
         &__catch {
             position: absolute;
-            height: 176px;
-            width: 460px;
+            height: 150px;
+            width: 450px;
             margin: 0;
             background: url("../images/catch.png") 0 0 no-repeat;
+            background-size: contain;
             left: 50px;
             top: 50px;
         }
@@ -258,10 +262,11 @@ ul {
             right: 40px;
             bottom: 40px;
         }
+
         &__logo {
             position: absolute;
-            height: 185px;
-            width: 520px;
+            height: 218px;
+            width: 580px;
             background: url("../images/logo.png") 0 0 no-repeat;
             left: 50px;
             top: 230px;
@@ -299,11 +304,9 @@ ul {
 
 // 帯
 .bar {
-    padding-bottom: 10px;
     position: relative;
     background-color: $orange;
     display: block;
-    height: 10px;
     background-color: $orange;
     display: flex;
     justify-content: center;
@@ -360,7 +363,7 @@ ul {
         text-align: center;
         margin: 0 auto;
         border: 3px solid $l-brown;
-        border-radius: 20px 20px;
+        border-radius: 5px 5px;
         position: relative;
         margin-bottom: 20px;
         @include shadow;
@@ -408,7 +411,7 @@ ul {
     &__topics2 {
         &__topic {
             position: relative;
-            filter: drop-shadow(0 0 5px rgba(0, 0, 0, .3));
+            filter: drop-shadow(0 0 2px rgba(0, 0, 0, .3));
 
 
             &__title {
@@ -432,10 +435,7 @@ ul {
                     font-weight: bold;
                     font-size: 2.2rem;
                     text-align: center;
-                    border-radius: 20px 20px;
-
-                    @include shadow;
-
+                    border-radius: 5px 5px;
                 }
             }
         }
@@ -563,7 +563,7 @@ ul {
                 border: 3px solid $l-brown;
                 padding: 20px;
                 margin-right: 25px;
-                border-radius: 20px 20px;
+                border-radius: 5px 5px;
 
                 @include shadow;
 
@@ -654,11 +654,11 @@ ul {
 
 
     &__area {
-        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+        @include shadow;
         padding: 20px 0;
 
         border: 3px solid $l-brown;
-        border-radius: 20px 20px;
+        border-radius: 5px 5px;
         @include shadow;
 
         &__para {
