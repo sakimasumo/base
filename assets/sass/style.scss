@@ -17,10 +17,7 @@ $clear:rgba(0, 0, 0, 0.0);
     // text-align: center;
 }
 
-@mixin shadow {
-    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
 
-}
 
 @mixin titlebase {
     width: 350px;
@@ -31,7 +28,7 @@ $clear:rgba(0, 0, 0, 0.0);
     margin: 0 auto;
     border-radius: 5px 5px;
 
-    @include shadow h2 {
+    h2 {
         margin-top: 8px;
         font-size: 2.2rem;
         font-weight: bold;
@@ -48,6 +45,7 @@ $clear:rgba(0, 0, 0, 0.0);
 // 全体共通
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    position: relative;
 }
 
 
@@ -129,7 +127,7 @@ ul {
         background-color: $white;
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
-        @include shadow;
+
         display: flex;
 
 
@@ -228,6 +226,7 @@ ul {
 
 
 
+// トップページ
 // トップイメージ
 .topimage {
     display: block;
@@ -276,31 +275,7 @@ ul {
 
 }
 
-// .topimage::before {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     background-repeat: repeat;
-//     height: 10px;
-//     background-size: 20px 20px;
-//     background-image: radial-gradient(circle at 10px -5px, transparent 12px, $orange 13px);
 
-// }
-
-// .topimage::after {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     background-repeat: repeat;
-//     height: 15px;
-//     background-size: 20px 20px;
-//     background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
-
-// }
 
 // 帯
 .bar {
@@ -366,27 +341,31 @@ ul {
         border-radius: 5px 5px;
         position: relative;
         margin-bottom: 20px;
-        @include shadow;
+
 
         &__title {
-            width: 215px;
-            height: 30px;
-            font-size: 1.6rem;
+            width: 250px;
+            height: 70px;
+            font-size: 1.2rem;
             position: absolute;
             background-color: $white;
-            top: -38px;
-            padding-left: 5px;
-            padding-top: 20px;
-            padding-bottom: 20px;
+            top: -33px;
             left: 0;
             right: 0;
             margin: auto;
             color: $orange;
-
+            line-height: 0.8rem;
             border: 3px solid $l-brown;
             border-radius: 10px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            @include shadow;
+            span {
+                padding-left: 5px;
+                padding-top: 18px;
+            }
+
         }
 
         &__para {
@@ -411,7 +390,6 @@ ul {
     &__topics2 {
         &__topic {
             position: relative;
-            filter: drop-shadow(0 0 2px rgba(0, 0, 0, .3));
 
 
             &__title {
@@ -565,7 +543,7 @@ ul {
                 margin-right: 25px;
                 border-radius: 5px 5px;
 
-                @include shadow;
+
 
 
                 &__round {
@@ -587,7 +565,7 @@ ul {
                     font-weight: bold;
                     font-size: 1.2rem;
 
-                    @include shadow;
+
 
                     &__num {
                         font-size: 1.5rem;
@@ -646,6 +624,147 @@ ul {
     background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
 }
 
+// よくあるご質問
+.faq {
+    padding-bottom: 0px;
+    position: relative;
+    display: block;
+
+
+    &__title {
+        @include titlebase background-color: $l-orange;
+        margin-bottom: 58px;
+    }
+
+    &__list {
+        &__topics {
+            padding-bottom: 50px;
+            position: relative;
+
+            &__topic {
+                margin: 0 auto;
+                border: 3px solid $l-brown;
+                border-radius: 5px 5px;
+                position: relative;
+                margin-bottom: 20px;
+
+                font-weight: bold;
+                font-size: 1.4rem;
+                margin-bottom: 60px;
+
+                &__round {
+
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    background-color: $orange;
+                    border-radius: 50%;
+                    border: 3px solid $l-brown;
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+p.question {
+    margin: 0 auto 0 0;
+    cursor: pointer;
+    padding: 20px;
+}
+
+p.question:hover {
+    opacity: 0.5;
+}
+
+p.answer {
+    display: none;
+    padding: 20px;
+}
+
+
+
+.faq::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
+
+}
+
+.faq::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
+
+}
+
+// コンタクト
+.contactform {
+    background-color: $l-orange;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    display: block;
+
+    &__area {
+
+        &__title {
+            @include titlebase background-color: $white;
+            margin-bottom: 48px;
+        }
+    }
+}
+
+.contactform::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
+
+}
+
+.contactform::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
+}
+
+
+
+
 // 連絡
 .contact {
     padding-bottom: 50px;
@@ -654,12 +773,12 @@ ul {
 
 
     &__area {
-        @include shadow;
+
         padding: 20px 0;
 
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
-        @include shadow;
+
 
         &__para {
             text-align: center;
@@ -682,6 +801,7 @@ ul {
 
                 &__number {
                     font-size: 2.2rem;
+                    font-weight: bold;
                 }
             }
 
@@ -693,6 +813,7 @@ ul {
 
                 &__btn {
                     font-size: 1.6rem;
+                    font-weight: bold;
                 }
             }
         }
@@ -710,7 +831,6 @@ ul {
     background-size: 20px 20px;
     background-image: radial-gradient(circle at 10px -5px, transparent 12px, $orange 13px);
 
-
 }
 
 .contact::after {
@@ -725,21 +845,42 @@ ul {
     background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
 }
 
-// トップに戻るボタン
-.topbtn {
-    position: fixed;
-    bottom: 100px;
-    right: 20px;
-    background-color: $orange;
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
+
 
 // フッター
 .glfooter {
     height: 80px;
     background-color: $orange;
+    color: $white;
+    text-align: center;
 
+}
+
+// トップに戻るボタン
+.topbtn{
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  background: $orange;
+  border-radius: 50%;
+}
+.topbtn:hover {
+    opacity:0.6;
+}
+.topbtn a{
+  display: block;
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.topbtn a span{
+  text-align: center;
 }
