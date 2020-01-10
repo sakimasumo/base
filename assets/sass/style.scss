@@ -53,6 +53,10 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .w {
     width: 990px;
     margin: 0 auto;
@@ -99,31 +103,36 @@ ul {
 
     &__area {
         display: block;
-        height: 100px;
+        height: 110px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-bottom: 15px;
-    }
 
+        &__logoarea {
+            height: 100px;
+            margin-bottom: 10px;
 
-    &__logo {
-        text-indent: -9999px;
-        width: 180px;
-        height: 50px;
-        background: url("../images/headerlogo.png") 0 0 no-repeat;
-        background-size: contain;
-    }
+            &__logo {
+                text-indent: -9999px;
+                height: 75px;
+                background: url("../images/headerlogo.png") 0 0 no-repeat;
+                background-size: contain;
+            }
 
-    &__catch {
-        width: 235px;
-        color: $brown;
-        font-size: 1.2rem;
+            &__catch {
+                color: $brown;
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+        }
+
     }
 
     &__box {
         width: 510px;
-        padding: 5px;
+        padding: 15px;
         background-color: $white;
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
@@ -249,7 +258,7 @@ ul {
             margin: 0;
             background: url("../images/catch.png") 0 0 no-repeat;
             background-size: contain;
-            left: 50px;
+            left: 0px;
             top: 50px;
         }
 
@@ -267,7 +276,7 @@ ul {
             height: 218px;
             width: 580px;
             background: url("../images/logo.png") 0 0 no-repeat;
-            left: 50px;
+            left: 00px;
             top: 230px;
         }
 
@@ -324,9 +333,10 @@ ul {
 // メイン
 // サービス
 .service {
-    padding-bottom: 0px;
+    padding-bottom: 50px;
     position: relative;
     display: block;
+
 
 
     &__title {
@@ -340,7 +350,7 @@ ul {
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 
 
         &__title {
@@ -384,6 +394,49 @@ ul {
 
             }
         }
+
+        &__icon1 {
+            display: block;
+            height: 150px;
+            width: 105px;
+            background-image: url("../images/s-i-img01.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+            position: absolute;
+            top: 150px;
+            left: 90px;
+
+        }
+
+        &__icon2 {
+            display: block;
+            height: 150px;
+            width: 105px;
+            background-image: url("../images/s-i-img02.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+            position: absolute;
+            top: 250px;
+            right: 90px;
+
+        }
+
+        &__icon3 {
+            display: block;
+            height: 150px;
+            width: 105px;
+            background-image: url("../images/s-i-img03.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+            right: 110px;
+            position: absolute;
+            top: 350px;
+            left: 140px;
+
+        }
     }
 
     &__topics1,
@@ -425,24 +478,30 @@ ul {
         margin-bottom: 15px;
 
         &__topic {
-            width: 250px;
-            height: 290px;
+            width: 230px;
+            height: 280px;
         }
 
         &__topic:nth-child(1) {
-            margin-left: 20px;
+            margin-left: 40px;
             background-image: url("../images/s-img01.png");
+            background-position: 0 0;
+            background-repeat: no-rep;
             background-size: contain;
         }
 
         &__topic:nth-child(2) {
             background-image: url("../images/s-img02.png");
+            background-position: 0 0;
+            background-repeat: no-rep;
             background-size: contain;
         }
 
         &__topic:nth-child(3) {
-            margin-right: 20px;
+            margin-right: 40px;
             background-image: url("../images/s-img03.png");
+            background-position: 0 0;
+            background-repeat: no-rep;
             background-size: contain;
         }
     }
@@ -453,25 +512,31 @@ ul {
         margin-bottom: 20px;
 
         &__topic {
-            width: 250px;
-            height: 290px;
+            width: 230px;
+            height: 280px;
             margin-bottom: 15px;
 
         }
 
         &__topic:nth-child(1) {
-            margin-left: 20px;
+            margin-left: 40px;
             background-image: url("../images/s-img04.png");
+            background-position: 0 0;
+            background-repeat: no-rep;
             background-size: contain;
         }
 
         &__topic:nth-child(2) {
             background-image: url("../images/s-img05.png");
+            background-position: 0 0;
+            background-repeat: no-rep;
             background-size: contain;
         }
 
         &__topic:nth-child(3) {
-            margin-right: 20px;
+            margin-right: 40px;
+            background-position: 0 0;
+            background-repeat: no-rep;
             background-image: url("../images/s-img06.png");
             background-size: contain;
         }
@@ -580,8 +645,9 @@ ul {
 
                 }
 
-                &__img {
+                &__image {
                     height: 100px;
+                    background-image: url("../images/g-step1");
                 }
 
                 &__para {
@@ -681,7 +747,20 @@ p.question {
     margin: 0 auto 0 0;
     cursor: pointer;
     padding: 20px;
+    font-size: 1.8rem;
 }
+
+p.question::after {
+    float: right;
+     content: '';/*何も入れない*/
+  display: inline-block;/*忘れずに！*/
+  width: 30px;/*画像の幅*/
+  height: 30px;/*画像の高さ*/
+  background-image: url("../images/faq.png");
+  background-size: contain;
+  vertical-align: middle;
+}
+
 
 p.question:hover {
     opacity: 0.5;
@@ -690,6 +769,7 @@ p.question:hover {
 p.answer {
     display: none;
     padding: 20px;
+    font-size: 1.8rem;
 }
 
 
@@ -724,15 +804,24 @@ p.answer {
 .contactform {
     background-color: $l-orange;
     padding-top: 50px;
-    margin-bottom: 50px;
     position: relative;
     display: block;
+    padding-bottom: 50px;
 
     &__area {
+        background-color: $white;
+        padding: 20px 0;
+        border: 3px solid $l-brown;
+        border-radius: 5px 5px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &__title {
-            @include titlebase background-color: $white;
-            margin-bottom: 48px;
+            @include titlebase;
+            background-color: $white;
+            margin-bottom: 20px;
         }
     }
 }
@@ -746,7 +835,7 @@ p.answer {
     background-repeat: repeat;
     height: 10px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $orange 13px);
 
 }
 
@@ -759,7 +848,8 @@ p.answer {
     background-repeat: repeat;
     height: 15px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
+    background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
+
 }
 
 
@@ -772,12 +862,14 @@ p.answer {
     display: block;
 
 
+
     &__area {
 
         padding: 20px 0;
-
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
+        background-color: $white;
+
 
 
         &__para {
@@ -845,6 +937,59 @@ p.answer {
     background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
 }
 
+.shiny-btn1 {
+    display: block;
+    position: relative;
+    width: 100%;
+    /*ボタンの幅*/
+    margin: 0 auto;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.shiny-btn1:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.shiny-btn1::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes shiny-btn1 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
 
 
 // フッター
@@ -857,30 +1002,33 @@ p.answer {
 }
 
 // トップに戻るボタン
-.topbtn{
-  width: 80px;
-  height: 80px;
-  position: fixed;
-  right: 0;
-  bottom: 100px;
-  background: $orange;
-  border-radius: 50%;
+.topbtn {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    bottom: 100px;
+    background: $orange;
+    border-radius: 50%;
 }
+
 .topbtn:hover {
-    opacity:0.6;
+    opacity: 0.6;
 }
-.topbtn a{
-  display: block;
-  width: 80px;
-  height: 80px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $white;
+
+.topbtn a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
     font-weight: bold;
     font-size: 1.5rem;
 }
-.topbtn a span{
-  text-align: center;
+
+.topbtn a span {
+    text-align: center;
 }

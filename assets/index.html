@@ -8,6 +8,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,8 +16,10 @@
     <header class="glheader">
         <div class="glheader__top"></div>
         <div class="w glheader__area">
-            <h1 class="glheader__logo">孫の手本舗</h1>
-            <p class="glheader__catch">埼玉県北本市の便利屋さん</p>
+            <div class="glheader__area__logoarea">
+                <p class="glheader__area__logoarea__catch">かゆいところに手がとどく！</p>
+                <h1 class="glheader__area__logoarea__logo">孫の手本舗</h1>
+            </div>
             <div class="glheader__box">
                 <ul class="glheader__box__tel">
                     <li class="glheader__box__tel__topic">
@@ -64,8 +67,13 @@
                 <div class="w service__intro">
                     <h3 class="service__intro__title"><img src="images/headerlogo.png" width="150px" alt=""><span> とは？</span></h3>
                     <p class="service__intro__para">
-                        埼玉県北本市を中心に営業をしている<span class="service__intro__para__span">「孫の手本舗」</span>は、<br>地域皆様のお困りごとをお手伝いする<span class="service__intro__para__span">便利屋</span>です。<br><span class="service__intro__para__span">家事を誰かに手伝ってもらえたら…</span><br><span class="service__intro__para__span">子供を見てほしいけど近くに頼める人がいない…</span><br><span class="service__intro__para__span">自分では家の修理や機械の操作ができない…</span><br>そんな時は、ぜひ<span class="service__intro__para__span">「孫の手本舗」</span>をご活用ください。<br>お客様の笑顔のために誠心誠意、お手伝いさせていただきます。<br>まずはぜひお客様のお困りごとをお気軽にご相談下さい。
+                        埼玉県北本市を中心に営業をしている<span class="service__intro__para__span">「孫の手本舗」</span>は、<br>地域皆様のお困りごとをお手伝いする<span class="service__intro__para__span">便利屋</span>です。</p>
+                    <p class="service__intro__para"><span class="service__intro__para__span">家事を誰かに手伝ってもらえたら…</span><br><span class="service__intro__para__span">子供を見てほしいけど近くに頼める人がいない…</span><br><span class="service__intro__para__span">自分では家の修理や機械の操作ができない…</span></p>
+                    <p class="service__intro__para">そんな時は、ぜひ<span class="service__intro__para__span">「孫の手本舗」</span>をご活用ください。<br>お客様の笑顔のために誠心誠意、お手伝いさせていただきます。<br>まずはぜひお客様のお困りごとをお気軽にご相談下さい。
                     </p>
+                    <div class="service__intro__icon1"></div>
+                    <div class="service__intro__icon2"></div>
+                    <div class="service__intro__icon3"></div>
                 </div>
                 <ul class="service__topics1">
                     <li class="service__topics1__topic">
@@ -107,7 +115,21 @@
                         </div>
                     </li>
                 </ul>
-                <p class="service__para">どんなささいなことでも<br>お気軽にご相談ください！</p>
+                <div class="contact__area">
+                    <p class="contact__area__para">まずはお気軽にご相談ください</p>
+                    <ul class="contact__area__topics">
+                        <a href="リンク先のURL" class="shiny-btn1">
+                            <li class="contact__area__topics__tel">
+                                <p class="contact__area__topics__tel__number">070-5463-7362</p>
+                            </li>
+                        </a>
+                        <a href="リンク先のURL" class="shiny-btn1">
+                            <li class="contact__area__topics__mail">
+                                <p class="contact__area__topics__mail__btn">ご予約・お問い合わせはこちらから</p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
             </div>
         </section>
         <!-- ガイド -->
@@ -124,7 +146,7 @@
                             <p class="guide__area__topics__topic__round__num">1</p>
                         </div>
                         <h3 class="guide__area__topics__topic__title">お問合せ</h3>
-                        <p class="guide__area__topics__topic__img"></p>
+                        <p class="guide__area__topics__topic__image"></p>
                         <p class="guide__area__topics__topic__para">お客様のお困りごとを<br>お知らせください</p>
                     </li>
                     <li class="guide__area__topics__topic">
@@ -133,7 +155,7 @@
                             <p class="guide__area__topics__topic__round__num">2</p>
                         </div>
                         <h3 class="guide__area__topics__topic__title">お見積り</h3>
-                        <p class="guide__area__topics__topic__img"></p>
+                        <p class="guide__area__topics__topic__image"></p>
                         <p class="guide__area__topics__topic__para">作業についての<br>お見積りを<br>させていただきます</p>
                     </li>
                     <li class="guide__area__topics__topic">
@@ -142,7 +164,7 @@
                             <p class="guide__area__topics__topic__round__num">3</p>
                         </div>
                         <h3 class="guide__area__topics__topic__title">作業</h3>
-                        <p class="guide__area__topics__topic__img"></p>
+                        <p class="guide__area__topics__topic__image"></p>
                         <p class="guide__area__topics__topic__para">誠心誠意の作業を<br>させていただきます</p>
                     </li>
                     <li class="guide__area__topics__topic guide__last__topic">
@@ -151,7 +173,7 @@
                             <p class="guide__area__topics__topic__round__num">4</p>
                         </div>
                         <h3 class="guide__area__topics__topic__title">お支払い</h3>
-                        <p class="guide__area__topics__topic__img"></p>
+                        <p class="guide__area__topics__topic__image"></p>
                         <p class="guide__area__topics__topic__para">作業確認後<br>お支払いとなります</p>
                     </li>
                 </ul>
@@ -201,12 +223,12 @@
         </section>
         <!-- お問い合わせ -->
         <section class="contactform">
-            <div class="w contactform__area">
+            <div class="w">
                 <div class="contactform__area__title">
                     <h2>CONTACT</h2>
                     <p>お問い合わせフォーム</p>
                 </div>
-                <div class="w contactform__area">
+                <div class="contactform__area">
                     <form action="confirm.php" method="post" name="form" onsubmit="return validate()">
                         <h1 class="contact-title">お問い合わせ 内容入力</h1>
                         <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
@@ -248,10 +270,20 @@
                         <button type="submit">確認画面へ</button>
                     </form>
                 </div>
+                <div class="contact__area">
+                    <p class="contact__area__para">お電話はこちらから</p>
+                    <ul class="contact__area__topics">
+                        <a href="リンク先のURL" class="shiny-btn1">
+                            <li class="contact__area__topics__tel">
+                                <p class="contact__area__topics__tel__number">070-5463-7362</p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
             </div>
         </section>
         <!-- 連絡 -->
-        <section class="contact">
+        <!--         <section class="contact">
             <div class="w">
                 <div class="contact__area">
                     <p class="contact__area__para">まずはお気軽にご相談ください</p>
@@ -265,7 +297,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
     <!-- トップに戻るボタン -->
     <div class="topbtn">
@@ -277,7 +309,6 @@
             <p class="glfooter__copy">&copy;孫の手本舗 2020</p>
         </div>
     </footer>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript">
     //<![CDATA[
     $(document).ready(function() {
@@ -286,6 +317,25 @@
         });
     });
     //]]>
+    </script>
+    <script>
+    jQuery(function() {
+        var pagetop = $('.topbtn');
+        pagetop.hide();
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) { //100pxスクロールしたら表示
+                pagetop.fadeIn();
+            } else {
+                pagetop.fadeOut();
+            }
+        });
+        pagetop.click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 700); //0.5秒かけてトップへ移動
+            return false;
+        });
+    });
     </script>
 </body>
 
