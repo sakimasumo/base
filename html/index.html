@@ -22,11 +22,9 @@
             </div>
             <div class="glheader__box">
                 <ul class="glheader__box__tel">
+
                     <li class="glheader__box__tel__topic">
-                        <img src="images/tel.png" alt="電話のロゴ">
-                    </li>
-                    <li class="glheader__box__tel__topic">
-                        <p>070-5463-7362</p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>070-5463-7362</p>
                     </li>
                 </ul>
                 <ul class="glheader__box__btn">
@@ -120,12 +118,12 @@
                     <ul class="contact__area__topics">
                         <a href="リンク先のURL" class="shiny-btn1">
                             <li class="contact__area__topics__tel">
-                                <p class="contact__area__topics__tel__number">070-5463-7362</p>
+                                <p class="contact__area__topics__tel__number"><i class="fa fa-phone" aria-hidden="true"></i>070-5463-7362</p>
                             </li>
                         </a>
                         <a href="リンク先のURL" class="shiny-btn1">
                             <li class="contact__area__topics__mail">
-                                <p class="contact__area__topics__mail__btn">ご予約・お問い合わせはこちらから</p>
+                                <p class="contact__area__topics__mail__btn"><i class="fa fa-envelope" aria-hidden="true"></i>ご予約・お問い合わせはこちらから</p>
                             </li>
                         </a>
                     </ul>
@@ -146,7 +144,7 @@
                             <p class="guide__area__topics__topic__round__num">1</p>
                         </div>
                         <h3 class="guide__area__topics__topic__title">お問合せ</h3>
-                        <p class="guide__area__topics__topic__image"></p>
+                        <p class="guide__area__topics__topic__image1"></p>
                         <p class="guide__area__topics__topic__para">お客様のお困りごとを<br>お知らせください</p>
                     </li>
                     <li class="guide__area__topics__topic">
@@ -155,8 +153,8 @@
                             <p class="guide__area__topics__topic__round__num">2</p>
                         </div>
                         <h3 class="guide__area__topics__topic__title">お見積り</h3>
-                        <p class="guide__area__topics__topic__image"></p>
-                        <p class="guide__area__topics__topic__para">作業についての<br>お見積りを<br>させていただきます</p>
+                        <p class="guide__area__topics__topic__image2"></p>
+                        <p class="guide__area__topics__topic__para">作業についてのお見積りを<br>させていただきます</p>
                     </li>
                     <li class="guide__area__topics__topic">
                         <div class="guide__area__topics__topic__round">
@@ -164,7 +162,7 @@
                             <p class="guide__area__topics__topic__round__num">3</p>
                         </div>
                         <h3 class="guide__area__topics__topic__title">作業</h3>
-                        <p class="guide__area__topics__topic__image"></p>
+                        <p class="guide__area__topics__topic__image3"></p>
                         <p class="guide__area__topics__topic__para">誠心誠意の作業を<br>させていただきます</p>
                     </li>
                     <li class="guide__area__topics__topic guide__last__topic">
@@ -173,7 +171,7 @@
                             <p class="guide__area__topics__topic__round__num">4</p>
                         </div>
                         <h3 class="guide__area__topics__topic__title">お支払い</h3>
-                        <p class="guide__area__topics__topic__image"></p>
+                        <p class="guide__area__topics__topic__image4"></p>
                         <p class="guide__area__topics__topic__para">作業確認後<br>お支払いとなります</p>
                     </li>
                 </ul>
@@ -224,50 +222,42 @@
         <!-- お問い合わせ -->
         <section class="contactform">
             <div class="w">
-                <div class="contactform__area__title">
+                <div class="contactform__title">
                     <h2>CONTACT</h2>
                     <p>お問い合わせフォーム</p>
                 </div>
                 <div class="contactform__area">
                     <form action="confirm.php" method="post" name="form" onsubmit="return validate()">
-                        <h1 class="contact-title">お問い合わせ 内容入力</h1>
-                        <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
-                        <div>
-                            <div>
-                                <label>お名前<span>必須</span></label>
-                                <input type="text" name="name" placeholder="例）山田太郎" value="">
+                        <h1 class="contactform__area__title">お問い合わせ 内容入力</h1>
+                        <p class="contactform__area__para">お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
+                        <div class="contactform__area__box">
+                            <div class="contactform__area__box__topics">
+                                <label class="contactform__area__box__topics__topic">お名前</label>
+                                <input class="formarea" type="text" name="name" placeholder="例）山田太郎" value="">
                             </div>
-                            <div>
-                                <label>ふりがな<span>必須</span></label>
-                                <input type="text" name="furigana" placeholder="例）やまだたろう" value="">
+                            <div class="contactform__area__box__topics">
+                                <label class="contactform__area__box__topics__topic">ふりがな</label>
+                                <input class="formarea" type="text" name="furigana" placeholder="例）やまだたろう" value="">
                             </div>
-                            <div>
-                                <label>メールアドレス<span>必須</span></label>
-                                <input type="text" name="email" placeholder="例）guest@example.com" value="">
+                            <div class="contactform__area__box__topics">
+                                <label class="contactform__area__box__topics__topic">メールアドレス</label>
+                                <input class="formarea" type="text" name="email" placeholder="例）guest@example.com" value="">
                             </div>
-                            <div>
-                                <label>電話番号<span>必須</span></label>
-                                <input type="text" name="tel" placeholder="例）0000000000" value="">
+                            <div class="contactform__area__box__topics">
+                                <label class="contactform__area__box__topics__topic">電話番号</label>
+                                <input class="formarea" type="text" name="tel" placeholder="例）0000000000" value="">
                             </div>
-                            <div>
-                                <label>性別<span>必須</span></label>
-                                <input type="radio" name="sex" value="男性" checked> 男性
-                                <input type="radio" name="sex" value="女性"> 女性
+                            <div class="contactform__area__box__topics">
+                                <label class="contactform__area__box__topics__topic">お問い合わせ項目</label>
+                                    <input type="radio" name="item" value="ご予約希望" checked="">ご予約希望　　
+                                    <input type="radio" name="item" value="お問い合わせ・ご相談">お問い合わせ・ご相談
                             </div>
-                            <div>
-                                <label>お問い合わせ項目<span>必須</span></label>
-                                <select name="item">
-                                    <option value="">お問い合わせ項目を選択してください</option>
-                                    <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
-                                    <option value="ご意見・ご感想">ご意見・ご感想</option>
-                                </select>
+                            <div class="contactform__area__box__topics">
+                                <label class="contactform__area__box__topics__topic">お問い合わせ内容</label>
+                                <textarea class="formarea" name="content" rows="5" placeholder="予約希望の詳細や日時、お問合せ内容などを入力してください"></textarea>
                             </div>
-                            <div>
-                                <label>お問い合わせ内容<span>必須</span></label>
-                                <textarea name="content" rows="5" placeholder="お問合せ内容を入力"></textarea>
-                            </div>
+                            <button  class="contactform__area__box__btn" type="submit"><i class="fa fa-check" aria-hidden="true"></i>確認画面へ</button>
                         </div>
-                        <button type="submit">確認画面へ</button>
                     </form>
                 </div>
                 <div class="contact__area">
@@ -275,29 +265,13 @@
                     <ul class="contact__area__topics">
                         <a href="リンク先のURL" class="shiny-btn1">
                             <li class="contact__area__topics__tel">
-                                <p class="contact__area__topics__tel__number">070-5463-7362</p>
+                                <p class="contact__area__topics__tel__number"><i class="fa fa-phone" aria-hidden="true"></i>070-5463-7362</p>
                             </li>
                         </a>
                     </ul>
                 </div>
             </div>
         </section>
-        <!-- 連絡 -->
-        <!--         <section class="contact">
-            <div class="w">
-                <div class="contact__area">
-                    <p class="contact__area__para">まずはお気軽にご相談ください</p>
-                    <ul class="contact__area__topics">
-                        <li class="contact__area__topics__tel">
-                            <p class="contact__area__topics__tel__number">070-5463-7362</p>
-                        </li>
-                        <li class="contact__area__topics__mail">
-                            <p class="contact__area__topics__mail__btn">ご予約・お問い合わせはこちらから</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
     </main>
     <!-- トップに戻るボタン -->
     <div class="topbtn">
@@ -306,7 +280,7 @@
     <!-- フッター -->
     <footer class="glfooter">
         <div class="w">
-            <p class="glfooter__copy">&copy;孫の手本舗 2020</p>
+            <p class="glfooter__copy">&copy;2020<img src="images/headerlogo.png" alt=""> </p>
         </div>
     </footer>
     <script type="text/javascript">
@@ -336,6 +310,38 @@
             return false;
         });
     });
+
+    function check_contactform() {
+        var name = $('input[name="name"]').val();
+        var furigana = $('input[name="furigana"]').val();
+        var address = $('input[name="address"]').val();
+        var tel = $('input[name="tel"]').val();
+        var otoiawase = $('textarea[name="otoiawase"]').val();
+        var errmsg = "";
+        if (name == "") {
+            errmsg = "お名前を入力して下さい\n";
+        }
+        if (furigana == "") {
+            errmsg = errmsg + "フリガナを入力して下さい\n";
+        }
+        if (address == "") {
+            errmsg = errmsg + "メールアドレスを入力して下さい\n";
+        }
+        if (!address.match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/)) {
+            errmsg = errmsg + "メールアドレスをご確認下さい\n";
+        }
+        if (tel == "") {
+            errmsg = errmsg + "電話番号を入力して下さい\n";
+        }
+        if (otoiawase == "") {
+            errmsg = errmsg + "お問い合わせ内容を入力して下さい\n";
+        }
+        if (errmsg != "") {
+            alert(errmsg);
+            return false;
+        }
+        $('form[name="myform"]').submit();
+    }
     </script>
 </body>
 
