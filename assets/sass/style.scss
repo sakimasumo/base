@@ -17,6 +17,10 @@ $clear:rgba(0, 0, 0, 0.0);
     // text-align: center;
 }
 
+@mixin btnhover {
+    opacity: 0.5;
+}
+
 
 
 @mixin titlebase {
@@ -120,6 +124,7 @@ i {
         &__logoarea {
             height: 100px;
             margin-bottom: 10px;
+            width: 30%;
 
             &__logo {
                 text-indent: -9999px;
@@ -139,21 +144,22 @@ i {
     }
 
     &__box {
-        width: 510px;
-        padding: 15px;
+        width: 65%;
+        padding: 10px;
         background-color: $white;
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
 
         display: flex;
+        justify-content: space-between;
 
 
         &__tel {
+            width: 45%;
             display: flex;
             justify-content: space-between;
-            font-size: 1.2rem;
+            font-size: 2.3rem;
             font-weight: bold;
-            color: $orange;
             margin: 0;
             margin-left: 20px;
 
@@ -170,43 +176,52 @@ i {
 
                 p {
                     text-align: center;
+                    color: $orange;
                 }
 
             }
         }
 
         &__btn {
-            margin-left: 30px;
-            width: 300px;
+            width: 50%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
 
             &__contact {
-                width: 140px;
-                height: 50px;
+                padding: 5px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 font-size: 1.0rem;
                 @include btn;
+                font-weight: bold;
+                margin-right: 5px;
 
                 p {
                     text-align: center;
                 }
             }
 
+            &__contact:hover {
+                @include btnhover
+            }
+
             &__faq {
-                width: 140px;
-                height: 50px;
+                padding: 5px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 font-size: 1.0rem;
                 @include btn;
+                font-weight: bold;
 
                 p {
                     text-align: center;
                 }
+            }
+
+            &__faq:hover {
+                @include btnhover
             }
         }
     }
@@ -485,8 +500,14 @@ i {
 
     &__topics1,
     &__topics2 {
-        &__topic {
             position: relative;
+            display: flex;
+            justify-content: space-between;
+        &__topic {
+            margin-bottom: 25px;
+            width: 230px;
+            height: 280px;
+                position: relative;
 
 
             &__title {
@@ -494,6 +515,9 @@ i {
                 margin-top: 33px;
                 font-size: 1.5rem;
                 color: $l-orange;
+                img {
+                        width: 100%;
+                }
             }
 
             &__price {
@@ -516,74 +540,14 @@ i {
         }
     }
 
-    &__topics1 {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 25px;
-
-        &__topic {
-            width: 230px;
-            height: 280px;
-        }
-
-        &__topic:nth-child(1) {
-            margin-left: 40px;
-            background-image: url("../images/s-img01.png");
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        &__topic:nth-child(2) {
-            background-image: url("../images/s-img02.png");
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        &__topic:nth-child(3) {
-            margin-right: 40px;
-            background-image: url("../images/s-img03.png");
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-    }
-
     &__topics2 {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
 
         &__topic {
-            width: 230px;
-            height: 280px;
             margin-bottom: 15px;
 
         }
 
-        &__topic:nth-child(1) {
-            margin-left: 40px;
-            background-image: url("../images/s-img04.png");
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
 
-        &__topic:nth-child(2) {
-            background-image: url("../images/s-img05.png");
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        &__topic:nth-child(3) {
-            margin-right: 40px;
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            background-image: url("../images/s-img06.png");
-            background-size: contain;
-        }
     }
 
     &__para {
@@ -802,7 +766,6 @@ i {
                 border-radius: 5px 5px;
                 position: relative;
                 margin-bottom: 20px;
-                margin-bottom: 60px;
 
                 &__round {
 
@@ -969,11 +932,17 @@ p.answer {
             }
 
             &__btn {
+                font-weight: bold;
+                border: none;
                 @include btn;
                 height: 50px;
                 width: 200px;
                 font-size: 1.5rem;
                 font-family: 'Noto Sans JP', sans-serif;
+            }
+
+            &__btn:hover {
+                @include btnhover
             }
         }
     }
@@ -1062,6 +1031,10 @@ p.answer {
                 }
             }
 
+            &__tel:hover {
+                @include btnhover
+            }
+
             &__mail {
                 height: 90px;
                 @include btn;
@@ -1073,6 +1046,10 @@ p.answer {
                     font-size: 2.0rem;
                     font-weight: bold;
                 }
+            }
+
+            &__mail:hover {
+                @include btnhover
             }
         }
     }
@@ -1209,7 +1186,7 @@ p.answer {
 }
 
 /*スマホ用ウィンドウ幅が最大479pxまでの場合に適用*/
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 768px) {
     body {
         // background-color: red;
     }
@@ -1221,11 +1198,20 @@ p.answer {
     .titlebox {
         width: 100%;
         padding: 0;
+
+        h2 {
+            width: 100%;
+        }
+    }
+
+    a {
+        text-decoration: none;
     }
 
     // ヘッダー
     .glheader {
         height: 350px;
+        padding-bottom: 50px;
 
         &__area {
             display: block;
@@ -1253,6 +1239,7 @@ p.answer {
             padding: 15px 0;
 
             &__tel {
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -1261,6 +1248,7 @@ p.answer {
 
                 &__topic {
                     font-size: 2.4rem;
+                    color: $orange;
                 }
             }
 
@@ -1325,9 +1313,10 @@ p.answer {
         &__intro {
             width: 100%;
             padding: 0;
+            position: relative;
 
             &__para {
-                padding: 0;
+                padding: 50px 0;
                 margin: 50px 0;
                 font-size: 0.8rem;
                 line-height: 2.0rem;
@@ -1335,6 +1324,32 @@ p.answer {
                 &__span {
                     font-size: 1.0rem;
                 }
+            }
+
+            &__icon1 {
+                position: absolute;
+                top: 160px;
+                left: 20px;
+
+            }
+
+            &__icon2 {
+                position: absolute;
+                top: 180px;
+                right: 20px;
+
+            }
+
+            &__icon3 {
+                position: absolute;
+                top: 410px;
+
+            }
+
+            &__icon1,
+            &__icon2,
+            &__icon3 {
+                opacity: 0.3;
             }
         }
 
@@ -1354,9 +1369,8 @@ p.answer {
 
             &__topic:nth-child(1) {
                 margin: 0 auto;
-                width: 100%;
-                height: 380px;
-                background-image: url("../images/s-img01.png");
+                width: auto;
+                height: auto;
                 background-position: 0 0;
                 background-repeat: no-repeat;
                 background-size: 100% auto;
@@ -1364,19 +1378,15 @@ p.answer {
 
             &__topic:nth-child(2) {
                 margin: 0 auto;
-                width: 100%;
-                height: 380px;
-                background-image: url("../images/s-img02.png");
+                width: 80%;
                 background-position: 0 0;
                 background-repeat: no-repeat;
                 background-size: 100% auto;
             }
 
             &__topic:nth-child(3) {
-                width: 100%;
-                height: 380px;
+                width: 80%;
                 margin: 0 auto;
-                background-image: url("../images/s-img03.png");
                 background-position: 0 0;
                 background-repeat: no-repeat;
                 background-size: 100% auto;
@@ -1389,6 +1399,18 @@ p.answer {
             &__topics {
                 width: 100%;
                 display: block;
+
+                &__topic {
+                    width: 75%;
+                    margin: 0 auto;
+                    padding: 0;
+                    margin-bottom: 40px;
+
+                }
+
+                &__topic:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -1430,7 +1452,8 @@ p.answer {
 
     .contact {
         &__area {
-                padding: 0;
+            padding: 0;
+
             &__topics {
                 width: 100%;
             }
