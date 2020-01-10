@@ -30,8 +30,12 @@ $clear:rgba(0, 0, 0, 0.0);
 
     h2 {
         margin-top: 8px;
-        font-size: 2.2rem;
-        font-weight: bold;
+
+        img {
+
+            text-align: center;
+            height: 35px;
+        }
     }
 
     p {
@@ -56,9 +60,11 @@ ul {
 a {
     text-decoration: none;
 }
+
 i {
     margin-right: 10px;
 }
+
 .w {
     width: 990px;
     margin: 0 auto;
@@ -242,9 +248,11 @@ i {
 .topimage {
     display: block;
     height: 660px;
+    position: relative;
 
     background: $white url("../images/heroimage.png") left bottom repeat-x;
     height: 660px;
+    margin-bottom: 50px;
 
     &__area {
         display: block;
@@ -282,55 +290,88 @@ i {
             top: 230px;
         }
 
+        &__bar {
+            position: absolute;
+            background-color: $orange;
+            display: block;
+            height: 50px;
+            padding: 20px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+
+            &__catch {
+                background-color: $orange;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    height: 45px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        &__bar::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-repeat: repeat;
+            height: 10px;
+            background-size: 20px 20px;
+            background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
+
+        }
+
+        &__bar::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-repeat: repeat;
+            height: 15px;
+            background-size: 20px 20px;
+            background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
+
+
+        }
+
     }
 
 }
-
 
 
 // 帯
-.bar {
-    position: relative;
-    background-color: $orange;
-    display: block;
-    background-color: $orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    padding-bottom: 30px;
-    margin-bottom: 50px;
 
-    &__catch {
-        color: $white;
-        font-size: 2.4rem;
-        text-align: center;
-    }
-}
 
-.bar::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-repeat: repeat;
-    height: 10px;
-    background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
-}
+// .bar::before {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     background-repeat: repeat;
+//     height: 10px;
+//     background-size: 20px 20px;
+//     background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
+// }
 
-.bar::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-repeat: repeat;
-    height: 15px;
-    background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
-}
+// .bar::after {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     background-repeat: repeat;
+//     height: 15px;
+//     background-size: 20px 20px;
+//     background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
+// }
 
 // メイン
 // サービス
@@ -342,7 +383,8 @@ i {
 
 
     &__title {
-        @include titlebase background-color: $l-orange;
+        @include titlebase;
+        background-color: $l-orange;
         margin-bottom: 58px;
     }
 
@@ -488,14 +530,14 @@ i {
             margin-left: 40px;
             background-image: url("../images/s-img01.png");
             background-position: 0 0;
-            background-repeat: no-rep;
+            background-repeat: no-repeat;
             background-size: contain;
         }
 
         &__topic:nth-child(2) {
             background-image: url("../images/s-img02.png");
             background-position: 0 0;
-            background-repeat: no-rep;
+            background-repeat: no-repeat;
             background-size: contain;
         }
 
@@ -503,7 +545,7 @@ i {
             margin-right: 40px;
             background-image: url("../images/s-img03.png");
             background-position: 0 0;
-            background-repeat: no-rep;
+            background-repeat: no-repeat;
             background-size: contain;
         }
     }
@@ -524,21 +566,21 @@ i {
             margin-left: 40px;
             background-image: url("../images/s-img04.png");
             background-position: 0 0;
-            background-repeat: no-rep;
+            background-repeat: no-repeat;
             background-size: contain;
         }
 
         &__topic:nth-child(2) {
             background-image: url("../images/s-img05.png");
             background-position: 0 0;
-            background-repeat: no-rep;
+            background-repeat: no-repeat;
             background-size: contain;
         }
 
         &__topic:nth-child(3) {
             margin-right: 40px;
             background-position: 0 0;
-            background-repeat: no-rep;
+            background-repeat: no-repeat;
             background-image: url("../images/s-img06.png");
             background-size: contain;
         }
@@ -986,7 +1028,7 @@ p.answer {
 
     &__area {
 
-        padding: 30px 0;
+        padding: 30px 50px;
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
         background-color: $white;
@@ -1164,4 +1206,234 @@ p.answer {
 
 .topbtn a span {
     text-align: center;
+}
+
+/*スマホ用ウィンドウ幅が最大479pxまでの場合に適用*/
+@media screen and (max-width: 479px) {
+    body {
+        // background-color: red;
+    }
+
+    .w {
+        width: 100%;
+    }
+
+    .titlebox {
+        width: 100%;
+        padding: 0;
+    }
+
+    // ヘッダー
+    .glheader {
+        height: 350px;
+
+        &__area {
+            display: block;
+
+            &__logoarea {
+                width: 100%;
+                height: 120px;
+                margin-bottom: 20px;
+
+                &__catch {
+                    width: 100%;
+                    height: auto;
+                }
+
+                &__logo {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &__box {
+            width: 100%;
+            display: block;
+            padding: 15px 0;
+
+            &__tel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                margin-bottom: 10px;
+
+                &__topic {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &__btn {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+
+                &__contact,
+                &__faq {
+                    font-size: 1.2rem;
+                    width: 100%;
+                    margin: 5px;
+                }
+
+            }
+        }
+    }
+
+    // トップイメージ
+    .topimage {
+        &__area {
+            height: 500px;
+
+            &__catch {
+                width: 100%;
+            }
+
+            &__hero {
+                width: 50%;
+                height: 50%;
+                background-size: contain;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                left: 0;
+            }
+
+            &__logo {
+                width: 70%;
+                background-size: contain;
+                float: left;
+            }
+
+            &__bar {
+                width: 100%;
+                padding: 0;
+
+                &__catch {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .service {
+        &__intro {
+            width: 100%;
+            padding: 0;
+
+            &__para {
+                padding: 0;
+                margin: 50px 0;
+                font-size: 0.8rem;
+                line-height: 2.0rem;
+
+                &__span {
+                    font-size: 1.0rem;
+                }
+            }
+        }
+
+        &__topics1,
+        &__topics2 {
+            display: block;
+            padding: 0;
+            margin-left: 0;
+            width: 100%;
+
+            &__topic {
+                &__title {
+                    padding-top: 40px;
+                    text-align: center;
+                }
+            }
+
+            &__topic:nth-child(1) {
+                margin: 0 auto;
+                width: 100%;
+                height: 380px;
+                background-image: url("../images/s-img01.png");
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+            }
+
+            &__topic:nth-child(2) {
+                margin: 0 auto;
+                width: 100%;
+                height: 380px;
+                background-image: url("../images/s-img02.png");
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+            }
+
+            &__topic:nth-child(3) {
+                width: 100%;
+                height: 380px;
+                margin: 0 auto;
+                background-image: url("../images/s-img03.png");
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+            }
+        }
+    }
+
+    .guide {
+        &__area {
+            &__topics {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    .contactform {
+        &__area {
+            &__box {
+                width: 100%;
+                display: block;
+                padding: 0;
+                border: none;
+
+                &__topics {
+                    width: 100%;
+
+                    &__topic {
+                        float: none;
+                        margin: 0 auto;
+
+                    }
+
+                    &__topic::after {
+                        margin-left: 5px;
+                        float: none;
+                    }
+
+                    div {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .formarea {
+        margin-top: 10px;
+        width: 80%;
+    }
+
+    .contact {
+        &__area {
+                padding: 0;
+            &__topics {
+                width: 100%;
+            }
+        }
+    }
 }
