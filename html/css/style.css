@@ -1280,7 +1280,6 @@ p.answer {
     margin: 5px;
   }
   .topimage {
-    margin-bottom: 20px;
     height: 480px;
   }
   .topimage__area {
@@ -1324,6 +1323,9 @@ p.answer {
     height: auto;
     max-width: 100%;
     max-height: 100%;
+  }
+  .service {
+    padding-top: 20px;
   }
   .service__title {
     margin-bottom: 43px;
@@ -1386,7 +1388,6 @@ p.answer {
   }
   .guide {
     padding-top: 20px;
-    margin-bottom: 20px;
   }
   .guide__area__title {
     margin-bottom: 43px;
@@ -1403,6 +1404,10 @@ p.answer {
   }
   .guide__area__topics__topic:last-child {
     margin-bottom: 0;
+  }
+  .faq {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .faq__title {
     margin-bottom: 48px;

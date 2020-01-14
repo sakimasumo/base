@@ -379,18 +379,15 @@ i {
     padding-bottom: 50px;
     position: relative;
     display: block;
-    @include backimage
 
-
-
-    &__title {
+    @include backimage &__title {
         @include titlebase;
         background-color: $white;
         margin-bottom: 58px;
     }
 
     &__intro {
-        background-color:$white;
+        background-color: $white;
         text-align: center;
         margin: 0 auto;
         border: 3px solid $l-brown;
@@ -730,7 +727,7 @@ i {
 
 // コンタクト
 .contactform {
-@include backimage;
+    @include backimage;
     padding-top: 50px;
     position: relative;
     display: block;
@@ -865,7 +862,7 @@ i {
 
     &__title {
         @include backimage;
-        @include titlebase ;
+        @include titlebase;
         margin-bottom: 58px;
     }
 
@@ -1315,7 +1312,6 @@ p.answer {
 
     // トップイメージ
     .topimage {
-        margin-bottom: 20px;
         height: 480px;
 
         &__area {
@@ -1374,7 +1370,9 @@ p.answer {
     }
 
     .service {
+        padding-top: 20px;
         &__title {
+
             margin-bottom: 43px;
         }
 
@@ -1461,7 +1459,6 @@ p.answer {
 
     .guide {
         padding-top: 20px;
-        margin-bottom: 20px;
 
         &__area {
             &__title {
@@ -1488,6 +1485,8 @@ p.answer {
     }
 
     .faq {
+        padding-top: 20px;
+        padding-bottom: 20px;
         &__title {
             margin-bottom: 48px;
         }
