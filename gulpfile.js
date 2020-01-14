@@ -33,7 +33,7 @@ gulp.task('copyJs',function() {
 gulp.task('sass',function() {
   return gulp.src(['assets/sass/*.scss'])
   .pipe(plumber())
-  .pipe(sass({outputStyle: 'compressed'}))
+  .pipe(sass({outputStyle: 'expanded'}))
   .pipe(gulp.dest('html/css/'))
   .pipe(browserSync.stream());
 });

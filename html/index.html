@@ -18,7 +18,7 @@
         <div class="w glheader__area">
             <div class="glheader__area__logoarea">
                 <p class="glheader__area__logoarea__catch">かゆいところに手がとどく！</p>
-                <h1 class="glheader__area__logoarea__logo"><img src="images/headerlogo.png" alt=""></h1>
+                <h1 class="glheader__area__logoarea__logo"><a href="index.html"><img src="images/headerlogo.png" alt=""></a></h1>
             </div>
             <div class="glheader__box">
                 <ul class="glheader__box__tel">
@@ -71,12 +71,16 @@
                     <h3 class="service__intro__title"><img src="images/headerlogo.png" width="150px" alt=""><span> とは？</span></h3>
                     <p class="service__intro__para">
                         埼玉県北本市を中心に営業をしている<span class="service__intro__para__span">「孫の手本舗」</span>は、<br>地域皆様のお困りごとをお手伝いする<span class="service__intro__para__span">便利屋</span>です。</p>
-                    <p class="service__intro__para"><span class="service__intro__para__span">家事を誰かに手伝ってもらえたら…</span><br><span class="service__intro__para__span">子供を見てほしいけど近くに頼める人がいない…</span><br><span class="service__intro__para__span">自分では家の修理や機械の操作ができない…</span></p>
+                    <p class="service__intro__para">
+                        <span class="service__intro__para__span">家事を誰かに手伝ってもらえたら…</span><br><span class="service__intro__para__span">子供を見てほしいけど頼める人がいない…</span><br><span class="service__intro__para__span">自分では家の修理や機械の操作ができない…</span>
+                        <div class="service__intro__icons">
+                            <div class="service__intro__icon1"></div>
+                            <div class="service__intro__icon2"></div>
+                            <div class="service__intro__icon3"></div>
+                        </div>
+                    </p>
                     <p class="service__intro__para">そんな時は、ぜひ<span class="service__intro__para__span">「孫の手本舗」</span>をご活用ください。<br>お客様の笑顔のために誠心誠意、お手伝いさせていただきます。<br>まずはぜひお客様のお困りごとをお気軽にご相談下さい。
                     </p>
-                    <div class="service__intro__icon1"></div>
-                    <div class="service__intro__icon2"></div>
-                    <div class="service__intro__icon3"></div>
                 </div>
                 <ul class="service__topics1">
                     <li class="service__topics1__topic">
@@ -192,18 +196,18 @@
                 <div class="faq__list">
                     <ul class="faq__list__topics">
                         <li class="faq__list__topics__topic">
-                            <p class="question">質問</p>
-                            <p class="answer">回答</p>
+                            <p class="question">予約は何日前までにしたらいいですか？</p>
+                            <p class="answer">即実対応も可能です。ただし、ご予約のお客様が優先となりますので、事前のご予約をお勧めいたします。</p>
                             <div class="faq__list__topics__topic__round">Q1.</div>
                         </li>
                         <li class="faq__list__topics__topic">
-                            <p class="question">質問</p>
-                            <p class="answer">回答</p>
+                            <p class="question">サービス一覧にない作業もお願いできますか？</p>
+                            <p class="answer">どんなことでも承ります。まずはお見積りをさせていただくので、お気軽にご相談くださいませ。</p>
                             <div class="faq__list__topics__topic__round">Q2.</div>
                         </li>
                         <li class="faq__list__topics__topic">
-                            <p class="question">質問</p>
-                            <p class="answer">回答</p>
+                            <p class="question">お支払いはどのようにすればいいですか？</p>
+                            <p class="answer">作業終了後の現金払いとなっております。</p>
                             <div class="faq__list__topics__topic__round">Q3.</div>
                         </li>
                         <li class="faq__list__topics__topic">
@@ -265,17 +269,15 @@
                         </div>
                     </form>
                 </div>
-                <div class="contact__area">
-                        <p class="contact__area__para">ご予約カレンダー</p>
-                        <p>
-                            <ul class="contact__area__topics">
-                                <a>
-                                    <li>
-                                        <iframe type="text/html" frameborder="0" width="100%" height="500spx" src="//airrsv.net/sakimasumo/calendar/embed/"></iframe>
-                                    </li>
-                                </a>
-                            </ul>
-                        </p>
+                <div class="contact__area calendarbox">
+                    <p class="contact__area__para">ご予約カレンダー</p>
+                    <ul>
+                        <a>
+                            <li>
+                                <iframe type="text/html" frameborder="0" width="100%" height="500spx" src="//airrsv.net/sakimasumo/calendar/embed/"></iframe>
+                            </li>
+                        </a>
+                    </ul>
                 </div>
                 <div class="contact__area">
                     <p class="contact__area__para">お電話はこちらから</p>
@@ -291,7 +293,7 @@
     </main>
     <!-- トップに戻るボタン -->
     <div class="topbtn">
-        <a href="index.html"><span>top</span></a>
+        <p><a href="index.html">topへ</a></p>
     </div>
     <!-- フッター -->
     <footer class="glfooter">
