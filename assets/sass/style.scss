@@ -2,24 +2,35 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
 
 // color
-$l-orange: #FFEAC5;
+$l-orange: #ffeaca;
 $orange: #F4810E;
 $brown:#4b4539;
 $l-brown:#b78d4a;
 $green:#83b33c;
 $white:#fff;
 $clear:rgba(0, 0, 0, 0.0);
+$d-green:#5E7F2B;
 
 @mixin btn {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+    // border-bottom: 3px solid $d-green;
     background-color: $green;
     color: $white;
     border-radius: 5px 5px;
-    box-shadow: inset 0 0 5px white;
-    // text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    // transition: all .22s;
+    transition: all 0.3s ease 0s;
+    margin-top: 5px;
+
 }
 
 @mixin btnhover {
-    opacity: 0.5;
+    // border-bottom-color: transparent;
+    // transform: translateY(0.1875em);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
+
 }
 
 @mixin titlebase {
@@ -72,7 +83,9 @@ i {
 
 // ヘッダー
 .glheader {
-    background-color: $l-orange;
+    height: auto;
+    background:url('../images/pattern.png') left top repeat-x ;
+    // background-color: $l-orange;
     position: relative;
     display: block;
 
@@ -390,7 +403,7 @@ i {
             color: $orange;
             line-height: 0.8rem;
             border: 3px solid $l-brown;
-            border-radius: 10px 10px;
+            border-radius: 5px 5px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -864,6 +877,7 @@ p.answer {
             border: 3px solid $l-orange;
             padding: 20px;
             text-align: center;
+            border-radius: 5px;
 
             &__topics {
                 margin-bottom: 20px;
@@ -1139,7 +1153,7 @@ p.answer {
     bottom: 150px;
     background: $orange;
     border-radius: 50%;
-    border: 3px solid $l-brown;
+    border: 1px solid $white;
 }
 
 .topbtn:hover {

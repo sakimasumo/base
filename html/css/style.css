@@ -23,7 +23,8 @@ i {
 }
 
 .glheader {
-  background-color: #FFEAC5;
+  height: auto;
+  background: url("../images/pattern.png") left top repeat-x;
   position: relative;
   display: block;
 }
@@ -45,7 +46,7 @@ i {
   background-repeat: repeat;
   height: 10px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px 15px, #FFEAC5 12px, transparent 13px);
+  background-image: radial-gradient(circle at 10px 15px, #ffeaca 12px, transparent 13px);
 }
 
 .glheader__top::after {
@@ -57,7 +58,7 @@ i {
   background-repeat: repeat;
   height: 15px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #FFEAC5 13px);
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffeaca 13px);
 }
 
 .glheader__area {
@@ -137,10 +138,14 @@ i {
   justify-content: center;
   align-items: center;
   font-size: 1.0rem;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
   background-color: #83b33c;
   color: #fff;
   border-radius: 5px 5px;
-  box-shadow: inset 0 0 5px white;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-top: 5px;
   font-weight: bold;
   margin-right: 5px;
 }
@@ -150,7 +155,8 @@ i {
 }
 
 .glheader__box__btn__contact:hover {
-  opacity: 0.5;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
 }
 
 .glheader__box__btn__faq {
@@ -159,10 +165,14 @@ i {
   justify-content: center;
   align-items: center;
   font-size: 1.0rem;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
   background-color: #83b33c;
   color: #fff;
   border-radius: 5px 5px;
-  box-shadow: inset 0 0 5px white;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-top: 5px;
   font-weight: bold;
 }
 
@@ -171,7 +181,8 @@ i {
 }
 
 .glheader__box__btn__faq:hover {
-  opacity: 0.5;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
 }
 
 .glheader::before {
@@ -301,7 +312,7 @@ i {
   text-align: center;
   margin: 0 auto;
   border-radius: 5px 5px;
-  background-color: #FFEAC5;
+  background-color: #ffeaca;
   margin-bottom: 58px;
 }
 
@@ -341,7 +352,7 @@ i {
   color: #F4810E;
   line-height: 0.8rem;
   border: 3px solid #b78d4a;
-  border-radius: 10px 10px;
+  border-radius: 5px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,7 +376,7 @@ i {
   font-weight: bold;
   color: #F4810E;
   display: inline-block;
-  background: linear-gradient(transparent 60%, #FFEAC5 0%);
+  background: linear-gradient(transparent 60%, #ffeaca 0%);
 }
 
 .service__intro__icon1 {
@@ -425,7 +436,7 @@ i {
 .service__topics1__topic__title, .service__topics2__topic__title {
   text-align: center;
   font-size: 1.5rem;
-  color: #FFEAC5;
+  color: #ffeaca;
 }
 
 .service__topics1__topic__title img, .service__topics2__topic__title img {
@@ -442,7 +453,7 @@ i {
 .service__topics1__topic__price__bar, .service__topics2__topic__price__bar {
   padding: 10px;
   border: 3px solid #b78d4a;
-  background-color: #FFEAC5;
+  background-color: #ffeaca;
   color: #b78d4a;
   font-weight: bold;
   font-size: 2.2rem;
@@ -471,7 +482,7 @@ i {
   background-repeat: repeat;
   height: 10px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #FFEAC5 13px);
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffeaca 13px);
 }
 
 .service::after {
@@ -483,11 +494,11 @@ i {
   background-repeat: repeat;
   height: 15px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px 15px, #FFEAC5 12px, transparent 13px);
+  background-image: radial-gradient(circle at 10px 15px, #ffeaca 12px, transparent 13px);
 }
 
 .guide {
-  background-color: #FFEAC5;
+  background-color: #ffeaca;
   padding-top: 50px;
   margin-bottom: 50px;
   position: relative;
@@ -661,7 +672,7 @@ i {
   text-align: center;
   margin: 0 auto;
   border-radius: 5px 5px;
-  background-color: #FFEAC5;
+  background-color: #ffeaca;
   margin-bottom: 58px;
 }
 
@@ -757,7 +768,7 @@ p.answer {
   background-repeat: repeat;
   height: 10px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #FFEAC5 13px);
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffeaca 13px);
 }
 
 .faq::after {
@@ -769,11 +780,11 @@ p.answer {
   background-repeat: repeat;
   height: 15px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px 15px, #FFEAC5 12px, transparent 13px);
+  background-image: radial-gradient(circle at 10px 15px, #ffeaca 12px, transparent 13px);
 }
 
 .contactform {
-  background-color: #FFEAC5;
+  background-color: #ffeaca;
   padding-top: 50px;
   position: relative;
   display: block;
@@ -835,9 +846,10 @@ p.answer {
 
 .contactform__area__box {
   display: block;
-  border: 3px solid #FFEAC5;
+  border: 3px solid #ffeaca;
   padding: 20px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .contactform__area__box__topics {
@@ -871,10 +883,14 @@ p.answer {
 .contactform__area__box__btn {
   font-weight: bold;
   border: none;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
   background-color: #83b33c;
   color: #fff;
   border-radius: 5px 5px;
-  box-shadow: inset 0 0 5px white;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-top: 5px;
   height: 50px;
   width: 200px;
   font-size: 1.5rem;
@@ -882,7 +898,8 @@ p.answer {
 }
 
 .contactform__area__box__btn:hover {
-  opacity: 0.5;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
 }
 
 .formarea {
@@ -949,10 +966,14 @@ p.answer {
 
 .contact__area__topics__tel {
   height: 90px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
   background-color: #83b33c;
   color: #fff;
   border-radius: 5px 5px;
-  box-shadow: inset 0 0 5px white;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -965,15 +986,20 @@ p.answer {
 }
 
 .contact__area__topics__tel:hover {
-  opacity: 0.5;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
 }
 
 .contact__area__topics__mail {
   height: 90px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
   background-color: #83b33c;
   color: #fff;
   border-radius: 5px 5px;
-  box-shadow: inset 0 0 5px white;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -985,7 +1011,8 @@ p.answer {
 }
 
 .contact__area__topics__mail:hover {
-  opacity: 0.5;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
 }
 
 .contact::before {
@@ -1099,7 +1126,7 @@ p.answer {
   bottom: 150px;
   background: #F4810E;
   border-radius: 50%;
-  border: 3px solid #b78d4a;
+  border: 1px solid #fff;
 }
 
 .topbtn:hover {
