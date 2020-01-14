@@ -24,7 +24,7 @@ i {
 
 .glheader {
   height: auto;
-  background: url("../images/pattern.png") left top repeat-x;
+  background-image: url("../images/pattern.png");
   position: relative;
   display: block;
 }
@@ -215,7 +215,6 @@ i {
   position: relative;
   background: #fff url("../images/heroimage.png") left bottom repeat-x;
   height: 660px;
-  margin-bottom: 50px;
 }
 
 .topimage__area {
@@ -283,7 +282,7 @@ i {
   background-repeat: repeat;
   height: 10px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px);
+  background-image: radial-gradient(circle at 10px 15px, #ffeaca 12px, transparent 13px);
 }
 
 .topimage__area__bar::after {
@@ -295,13 +294,15 @@ i {
   background-repeat: repeat;
   height: 15px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #fff 13px);
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffeaca 13px);
 }
 
 .service {
+  padding-top: 50px;
   padding-bottom: 50px;
   position: relative;
   display: block;
+  background-image: url("../images/pattern.png");
 }
 
 .service__title {
@@ -312,7 +313,7 @@ i {
   text-align: center;
   margin: 0 auto;
   border-radius: 5px 5px;
-  background-color: #ffeaca;
+  background-color: #fff;
   margin-bottom: 58px;
 }
 
@@ -332,6 +333,7 @@ i {
 }
 
 .service__intro {
+  background-color: #fff;
   text-align: center;
   margin: 0 auto;
   border: 3px solid #b78d4a;
@@ -453,7 +455,7 @@ i {
 .service__topics1__topic__price__bar, .service__topics2__topic__price__bar {
   padding: 10px;
   border: 3px solid #b78d4a;
-  background-color: #ffeaca;
+  background-color: #fff;
   color: #b78d4a;
   font-weight: bold;
   font-size: 2.2rem;
@@ -482,7 +484,7 @@ i {
   background-repeat: repeat;
   height: 10px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffeaca 13px);
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #fff 13px);
 }
 
 .service::after {
@@ -494,13 +496,11 @@ i {
   background-repeat: repeat;
   height: 15px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px 15px, #ffeaca 12px, transparent 13px);
+  background-image: radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px);
 }
 
 .guide {
-  background-color: #ffeaca;
   padding-top: 50px;
-  margin-bottom: 50px;
   position: relative;
   display: block;
 }
@@ -513,7 +513,7 @@ i {
   text-align: center;
   margin: 0 auto;
   border-radius: 5px 5px;
-  background-color: #fff;
+  background-image: url("../images/pattern.png");
   margin-bottom: 48px;
 }
 
@@ -643,7 +643,7 @@ i {
   background-repeat: repeat;
   height: 10px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px);
+  background-image: radial-gradient(circle at 10px 15px, #ffeaca 12px, transparent 13px);
 }
 
 .guide::after {
@@ -655,140 +655,15 @@ i {
   background-repeat: repeat;
   height: 15px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #fff 13px);
-}
-
-.faq {
-  padding-bottom: 0px;
-  position: relative;
-  display: block;
-}
-
-.faq__title {
-  width: 350px;
-  height: 80px;
-  color: #F4810E;
-  border: 3px solid #b78d4a;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 5px 5px;
-  background-color: #ffeaca;
-  margin-bottom: 58px;
-}
-
-.faq__title h2 {
-  margin-top: 8px;
-}
-
-.faq__title h2 img {
-  text-align: center;
-  height: 35px;
-}
-
-.faq__title p {
-  margin-top: 8px;
-  font-weight: bold;
-  font-size: 1.0rem;
-}
-
-.faq__list__topics {
-  position: relative;
-  padding: 1px;
-}
-
-.faq__list__topics__topic {
-  margin: 0 auto;
-  border: 3px solid #b78d4a;
-  border-radius: 5px 5px;
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.faq__list__topics__topic__round {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: #F4810E;
-  border-radius: 50%;
-  border: 3px solid #b78d4a;
-  position: absolute;
-  top: -40px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-p.question {
-  margin: 0 auto 0 0;
-  cursor: pointer;
-  padding: 20px;
-  font-size: 1.4rem;
-  color: #4b4539;
-}
-
-p.question::after {
-  float: right;
-  content: '';
-  /*何も入れない*/
-  display: inline-block;
-  /*忘れずに！*/
-  width: 30px;
-  /*画像の幅*/
-  height: 30px;
-  /*画像の高さ*/
-  background-image: url("../images/faq.png");
-  background-size: contain;
-  vertical-align: middle;
-}
-
-p.question:hover {
-  opacity: 0.5;
-}
-
-p.answer {
-  color: #F4810E;
-  display: none;
-  margin: 0 20px 10px 20px;
-  padding: 20px;
-  font-size: 1.4rem;
-}
-
-.faq::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: repeat;
-  height: 10px;
-  background-size: 20px 20px;
   background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffeaca 13px);
 }
 
-.faq::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: repeat;
-  height: 15px;
-  background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px 15px, #ffeaca 12px, transparent 13px);
-}
-
 .contactform {
-  background-color: #ffeaca;
+  background-image: url("../images/pattern.png");
   padding-top: 50px;
   position: relative;
   display: block;
-  padding-bottom: 130px;
+  padding-bottom: 30px;
 }
 
 .contactform__title {
@@ -921,10 +796,136 @@ p.answer {
   background-repeat: repeat;
   height: 10px;
   background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #F4810E 13px);
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #fff 13px);
 }
 
 .contactform::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 15px;
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px);
+}
+
+.faq {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  display: block;
+}
+
+.faq__title {
+  background-image: url("../images/pattern.png");
+  width: 350px;
+  height: 80px;
+  color: #F4810E;
+  border: 3px solid #b78d4a;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 5px 5px;
+  margin-bottom: 58px;
+}
+
+.faq__title h2 {
+  margin-top: 8px;
+}
+
+.faq__title h2 img {
+  text-align: center;
+  height: 35px;
+}
+
+.faq__title p {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1.0rem;
+}
+
+.faq__list__topics {
+  position: relative;
+  padding: 1px;
+}
+
+.faq__list__topics__topic {
+  margin: 0 auto;
+  border: 3px solid #b78d4a;
+  border-radius: 5px 5px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.faq__list__topics__topic__round {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #F4810E;
+  border-radius: 50%;
+  border: 3px solid #b78d4a;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+p.question {
+  margin: 0 auto 0 0;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 1.4rem;
+  color: #4b4539;
+}
+
+p.question::after {
+  float: right;
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 30px;
+  /*画像の幅*/
+  height: 30px;
+  /*画像の高さ*/
+  background-image: url("../images/faq.png");
+  background-size: contain;
+  vertical-align: middle;
+}
+
+p.question:hover {
+  opacity: 0.5;
+}
+
+p.answer {
+  color: #F4810E;
+  display: none;
+  margin: 0 20px 10px 20px;
+  padding: 20px;
+  font-size: 1.4rem;
+}
+
+.faq::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: repeat;
+  height: 10px;
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #F4810E 13px);
+}
+
+.faq::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1151,7 +1152,7 @@ p.answer {
 
 .privacy {
   height: auto;
-  padding: px;
+  padding-top: 30px;
 }
 
 .privacy__title {

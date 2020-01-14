@@ -29,8 +29,12 @@ $d-green:#5E7F2B;
     // border-bottom-color: transparent;
     // transform: translateY(0.1875em);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
-  transform: translateY(-0.1875em);
+    transform: translateY(-0.1875em);
 
+}
+
+@mixin backimage {
+    background-image: url('../images/pattern.png');
 }
 
 @mixin titlebase {
@@ -84,7 +88,9 @@ i {
 // ヘッダー
 .glheader {
     height: auto;
-    background:url('../images/pattern.png') left top repeat-x ;
+    @include backimage;
+
+
     // background-color: $l-orange;
     position: relative;
     display: block;
@@ -272,7 +278,6 @@ i {
 
     background: $white url("../images/heroimage.png") left bottom repeat-x;
     height: 660px;
-    margin-bottom: 50px;
 
     &__area {
         display: block;
@@ -342,7 +347,7 @@ i {
             background-repeat: repeat;
             height: 10px;
             background-size: 20px 20px;
-            background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
+            background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
 
         }
 
@@ -355,7 +360,7 @@ i {
             background-repeat: repeat;
             height: 15px;
             background-size: 20px 20px;
-            background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
+            background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
 
 
         }
@@ -370,19 +375,22 @@ i {
 // メイン
 // サービス
 .service {
+    padding-top: 50px;
     padding-bottom: 50px;
     position: relative;
     display: block;
+    @include backimage
 
 
 
     &__title {
         @include titlebase;
-        background-color: $l-orange;
+        background-color: $white;
         margin-bottom: 58px;
     }
 
     &__intro {
+        background-color:$white;
         text-align: center;
         margin: 0 auto;
         border: 3px solid $l-brown;
@@ -509,7 +517,7 @@ i {
                 &__bar {
                     padding: 10px;
                     border: 3px solid $l-brown;
-                    background-color: $l-orange;
+                    background-color: $white;
                     color: $l-brown;
                     font-weight: bold;
                     font-size: 2.2rem;
@@ -547,7 +555,7 @@ i {
     background-repeat: repeat;
     height: 10px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
 
 }
 
@@ -560,22 +568,21 @@ i {
     background-repeat: repeat;
     height: 15px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
+    background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
 
 }
 
 // ガイド
 .guide {
-    background-color: $l-orange;
     padding-top: 50px;
-    margin-bottom: 50px;
     position: relative;
     display: block;
 
     &__area {
 
         &__title {
-            @include titlebase background-color: $white;
+            @include titlebase;
+            @include backimage;
             margin-bottom: 48px;
         }
 
@@ -705,7 +712,7 @@ i {
     background-repeat: repeat;
     height: 10px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
+    background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
 }
 
 .guide::after {
@@ -717,129 +724,17 @@ i {
     background-repeat: repeat;
     height: 15px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
-}
-
-// よくあるご質問
-.faq {
-    padding-bottom: 0px;
-    position: relative;
-    display: block;
-
-
-    &__title {
-        @include titlebase background-color: $l-orange;
-        margin-bottom: 58px;
-    }
-
-    &__list {
-        &__topics {
-            position: relative;
-            padding: 1px;
-
-            &__topic {
-                margin: 0 auto;
-                border: 3px solid $l-brown;
-                border-radius: 5px 5px;
-                position: relative;
-                margin-bottom: 50px;
-
-                &__round {
-
-                    display: block;
-                    width: 50px;
-                    height: 50px;
-                    background-color: $orange;
-                    border-radius: 50%;
-                    border: 3px solid $l-brown;
-                    position: absolute;
-                    top: -40px;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: $white;
-                    font-weight: bold;
-                    font-size: 1.2rem;
-                }
-            }
-        }
-    }
-}
-
-p.question {
-    margin: 0 auto 0 0;
-    cursor: pointer;
-    padding: 20px;
-    font-size: 1.4rem;
-    color: $brown;
-}
-
-p.question::after {
-    float: right;
-    content: '';
-    /*何も入れない*/
-    display: inline-block;
-    /*忘れずに！*/
-    width: 30px;
-    /*画像の幅*/
-    height: 30px;
-    /*画像の高さ*/
-    background-image: url("../images/faq.png");
-    background-size: contain;
-    vertical-align: middle;
-}
-
-
-p.question:hover {
-    opacity: 0.5;
-}
-
-p.answer {
-    color: $orange;
-    display: none;
-    margin: 0 20px 10px 20px;
-    padding: 20px;
-    font-size: 1.4rem;
-}
-
-
-
-.faq::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-repeat: repeat;
-    height: 10px;
-    background-size: 20px 20px;
     background-image: radial-gradient(circle at 10px -5px, transparent 12px, $l-orange 13px);
-
 }
 
-.faq::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-repeat: repeat;
-    height: 15px;
-    background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px 15px, $l-orange 12px, transparent 13px);
-
-}
 
 // コンタクト
 .contactform {
-    background-color: $l-orange;
+@include backimage;
     padding-top: 50px;
     position: relative;
     display: block;
-    padding-bottom: 130px;
+    padding-bottom: 30px;
 
     &__title {
         @include titlebase;
@@ -943,7 +838,7 @@ p.answer {
     background-repeat: repeat;
     height: 10px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $orange 13px);
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $white 13px);
 
 }
 
@@ -956,10 +851,124 @@ p.answer {
     background-repeat: repeat;
     height: 15px;
     background-size: 20px 20px;
-    background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
+    background-image: radial-gradient(circle at 10px 15px, $white 12px, transparent 13px);
 
 }
 
+// よくあるご質問
+.faq {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    position: relative;
+    display: block;
+
+
+    &__title {
+        @include backimage;
+        @include titlebase ;
+        margin-bottom: 58px;
+    }
+
+    &__list {
+        &__topics {
+            position: relative;
+            padding: 1px;
+
+            &__topic {
+                margin: 0 auto;
+                border: 3px solid $l-brown;
+                border-radius: 5px 5px;
+                position: relative;
+                margin-bottom: 50px;
+
+                &__round {
+
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    background-color: $orange;
+                    border-radius: 50%;
+                    border: 3px solid $l-brown;
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+p.question {
+    margin: 0 auto 0 0;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 1.4rem;
+    color: $brown;
+}
+
+p.question::after {
+    float: right;
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 30px;
+    /*画像の幅*/
+    height: 30px;
+    /*画像の高さ*/
+    background-image: url("../images/faq.png");
+    background-size: contain;
+    vertical-align: middle;
+}
+
+
+p.question:hover {
+    opacity: 0.5;
+}
+
+p.answer {
+    color: $orange;
+    display: none;
+    margin: 0 20px 10px 20px;
+    padding: 20px;
+    font-size: 1.4rem;
+}
+
+
+
+.faq::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, $orange 13px);
+
+}
+
+.faq::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
+
+}
 
 
 
@@ -1179,7 +1188,7 @@ p.answer {
 // 個人情報保護
 .privacy {
     height: auto;
-    padding: px;
+    padding-top: 30px;
 
     &__title {
 
