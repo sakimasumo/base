@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>孫の手本舗のサイト</title>
+    <title>孫の手本舗</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
@@ -232,38 +232,50 @@
                     <p>お問い合わせフォーム</p>
                 </div>
                 <div class="contactform__area">
-                    <form action="confirm.php" method="post" name="form" onsubmit="return validate()">
+                    <form action="confirmation.php" method="post" name="myform" onsubmit="return validate()">
                         <h1 class="contactform__area__title">お問い合わせ 内容入力</h1>
                         <p class="contactform__area__para">お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
                         <div class="contactform__area__box">
                             <div class="contactform__area__box__topics">
                                 <label class="contactform__area__box__topics__topic">お名前</label>
-                                <input class="formarea" type="text" name="name" placeholder="例）山田太郎" value="">
+                                <input class="formarea" type="text" name="name" placeholder="例）山田太郎" value="" required>
                             </div>
                             <div class="contactform__area__box__topics">
                                 <label class="contactform__area__box__topics__topic">ふりがな</label>
-                                <input class="formarea" type="text" name="furigana" placeholder="例）やまだたろう" value="">
+                                <input class="formarea" type="text" name="furigana" placeholder="例）やまだたろう" value="" required>
                             </div>
                             <div class="contactform__area__box__topics">
                                 <label class="contactform__area__box__topics__topic">メールアドレス</label>
-                                <input class="formarea" type="text" name="email" placeholder="例）guest@example.com" value="">
+                                <input class="formarea" type="text" name="address" placeholder="例）guest@example.com" value="">
                             </div>
                             <div class="contactform__area__box__topics">
                                 <label class="contactform__area__box__topics__topic">電話番号</label>
-                                <input class="formarea" type="text" name="tel" placeholder="例）0000000000" value="">
+                                <input class="formarea" type="text" name="tel" placeholder="例）0000000000" value="" required>
                             </div>
                             <div class="contactform__area__box__topics">
                                 <label class="contactform__area__box__topics__topic">お問い合わせ項目</label>
                                 <div><input class="radiobtn" type="radio" name="item" value="ご予約希望" checked="">ご予約希望　
-                                    <input class="radiobtn" type="radio" name="item" value="お問い合わせ・ご相談">お問い合わせ・ご相談</div>
+                                    <input class="radiobtn" type="radio" name="item" value="お問い合わせ・ご相談" required>お問い合わせ・ご相談</div>
                             </div>
                             <div class="contactform__area__box__topics">
                                 <label class="contactform__area__box__topics__topic">お問い合わせ内容</label>
-                                <textarea class="formarea" name="content" rows="5" placeholder="予約希望の詳細や日時、お問合せ内容などを入力してください"></textarea>
+                                <textarea class="formarea" name="content" rows="5" placeholder="予約希望の詳細や日時、お問合せ内容などを入力してください" required></textarea>
                             </div>
                             <button class="contactform__area__box__btn" type="submit"><i class="fa fa-check" aria-hidden="true"></i>確認画面へ</button>
                         </div>
                     </form>
+                </div>
+                <div class="contact__area">
+                        <p class="contact__area__para">ご予約カレンダー</p>
+                        <p>
+                            <ul class="contact__area__topics">
+                                <a>
+                                    <li>
+                                        <iframe type="text/html" frameborder="0" width="100%" height="500spx" src="//airrsv.net/sakimasumo/calendar/embed/"></iframe>
+                                    </li>
+                                </a>
+                            </ul>
+                        </p>
                 </div>
                 <div class="contact__area">
                     <p class="contact__area__para">お電話はこちらから</p>
@@ -275,7 +287,6 @@
                         </a>
                     </ul>
                 </div>
-            </div>
         </section>
     </main>
     <!-- トップに戻るボタン -->
@@ -285,6 +296,12 @@
     <!-- フッター -->
     <footer class="glfooter">
         <div class="w">
+            <ul class="glfooter__nav">
+                <li class="glfooter__nav__topic"><a href="index.html">サイトトップ</a></li>
+                <li class="glfooter__nav__topic"><a href="#contact">予約・お問い合わせ</a></li>
+                <li class="glfooter__nav__topic"><a href="#faq">よくあるご質問</a></li>
+                <li class="glfooter__nav__topic"><a href="privacy.html">個人情報保護について</a></li>
+            </ul>
             <p class="glfooter__copy">&copy;2020<img src="images/headerlogo.png" alt=""> </p>
         </div>
     </footer>
@@ -321,7 +338,7 @@
         var furigana = $('input[name="furigana"]').val();
         var address = $('input[name="address"]').val();
         var tel = $('input[name="tel"]').val();
-        var otoiawase = $('textarea[name="otoiawase"]').val();
+        var otoiawase = $('textarea[name="content"]').val();
         var errmsg = "";
         if (name == "") {
             errmsg = "お名前を入力して下さい\n";

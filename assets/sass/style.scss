@@ -481,8 +481,8 @@ i {
 
         &__topic {
             margin-bottom: 25px;
-            width: 230px;
-            height: 280px;
+            width: 250px;
+            height: 300px;
             position: relative;
 
 
@@ -514,6 +514,14 @@ i {
                     border-radius: 5px 5px;
                 }
             }
+        }
+
+        &__topic:first-child {
+            margin-left: 40px;
+        }
+
+        &__topic:last-child {
+            margin-right: 40px;
         }
     }
 
@@ -978,6 +986,7 @@ p.answer {
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
         background-color: $white;
+        margin-bottom: 20px;
 
 
 
@@ -1121,6 +1130,20 @@ p.answer {
     font-size: 1.8rem;
     padding-top: 25px;
 
+    &__nav {
+        margin: 0 auto;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
     &__copy {
         img {
             height: 30px;
@@ -1139,6 +1162,7 @@ p.answer {
     bottom: 150px;
     background: $orange;
     border-radius: 50%;
+    border: 3px solid $l-brown;
 }
 
 .topbtn:hover {
@@ -1160,6 +1184,44 @@ p.answer {
 
 .topbtn a span {
     text-align: center;
+}
+
+// 個人情報保護
+.privacy {
+    background-color: $white;
+
+    &__title {
+
+        @include titlebase;
+        background-color: $white;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+    }
+    &__area {
+      height: auto;
+      border:3px solid $l-brown;
+      border-radius: 5px 5px;
+      margin-bottom: 20px;
+      &__topics {
+        padding: 30px;
+        &__topic {
+          text-align: center;
+          margin-bottom: 15px;
+          h3 {
+            margin: 10px;
+          }
+        }
+      }
+    }
 }
 
 /*スマホ用ウィンドウ幅が最大479pxまでの場合に適用*/
@@ -1254,11 +1316,11 @@ p.answer {
     // トップイメージ
     .topimage {
         margin-bottom: 20px;
-        height: 450px;
+        height: 480px;
 
         &__area {
             width: 95%;
-            height: 450px;
+            height: 480px;
 
             &__catch {
                 width: 98%;
@@ -1291,6 +1353,7 @@ p.answer {
             &__bar {
                 width: 100%;
                 padding: 0;
+                height: 60px;
 
                 &__catch {
                     width: 97%;
@@ -1338,7 +1401,7 @@ p.answer {
 
             &__icon1 {
                 position: absolute;
-                top: 160px;
+                top: 130px;
                 left: 20px;
 
             }
@@ -1352,7 +1415,7 @@ p.answer {
 
             &__icon3 {
                 position: absolute;
-                top: 410px;
+                top: 280px;
 
             }
 
@@ -1363,10 +1426,45 @@ p.answer {
             }
         }
 
-        &__topics1 {
+        &__topics1,
+        &__topics2 {
+            width: 95%;
+            margin: 0 auto;
+
             &__topic {
-                height: 250px;
+                margin: 0;
+                height: auto;
+
+                &__title {
+                    margin-top: 15px;
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                    max-height: 100%
+                }
+
+                &__price {
+                    width: 90%;
+
+                    &__bar {
+                        font-size: 1.1rem;
+                        padding: 5px 0 5px 0;
+                    }
+                }
             }
+
+            &__topic:first-child {
+                margin: 0;
+            }
+
+            &__topic:last-child {
+                margin: 0;
+            }
+
+        }
+
+        &__topics2 {
+            margin-bottom: 15px;
         }
 
     }
@@ -1403,6 +1501,11 @@ p.answer {
         &__title {
             margin-bottom: 48px;
         }
+
+        &__list {
+            width: 95%;
+            margin: 0 auto;
+        }
     }
 
     .contactform {
@@ -1415,6 +1518,9 @@ p.answer {
         }
 
         &__area {
+            width: 95%;
+            margin: 0 auto;
+            margin-bottom: 15px;
 
             &__box {
                 width: 100%;
@@ -1441,6 +1547,10 @@ p.answer {
                     }
                 }
             }
+
+            &__para {
+                font-size: 1.0rem;
+            }
         }
     }
 
@@ -1454,10 +1564,31 @@ p.answer {
 
     .contact {
         &__area {
-            padding: 0;
+            width: 90%;
+            margin: 0 auto;
+            padding: 15px 5px 15px 5px;
+
+            &__para {
+                font-size: 1.4rem;
+            }
 
             &__topics {
                 width: 100%;
+
+                &__tel {
+                    &__number {
+                        font-size: 2.6rem;
+                    }
+                }
+
+                &__mail {
+                    padding-right: 5px;
+                    padding-right: 5px;
+
+                    &__btn {
+                        font-size: 1.7rem;
+                    }
+                }
             }
         }
     }
