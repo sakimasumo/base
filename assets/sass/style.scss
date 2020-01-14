@@ -12,24 +12,31 @@ $clear:rgba(0, 0, 0, 0.0);
 $d-green:#5E7F2B;
 
 @mixin btn {
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
-    // border-bottom: 3px solid $d-green;
     background-color: $green;
     color: $white;
     border-radius: 5px 5px;
     display: inline-block;
     cursor: pointer;
-    // transition: all .22s;
-    transition: all 0.3s ease 0s;
     margin-top: 5px;
+    // 浮く
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease 0s;
+    // 沈む
+    // border-bottom: 3px solid $d-green;
+    // transition: all .22s;
+
+
+
 
 }
 
 @mixin btnhover {
-    // border-bottom-color: transparent;
-    // transform: translateY(0.1875em);
+    // 浮く
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
     transform: translateY(-0.1875em);
+    // 沈む
+    // border-bottom-color: transparent;
+    // transform: translateY(0.1875em);
 
 }
 
@@ -60,6 +67,14 @@ $d-green:#5E7F2B;
         font-weight: bold;
         font-size: 1.0rem;
     }
+}
+
+@mixin shadow {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+@mixin shadowfilter {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 }
 
 // 全体共通
@@ -145,6 +160,7 @@ i {
                     text-indent: -9999px;
                     height: 75px;
                     background-size: contain;
+                    @include shadowfilter;
                 }
             }
 
@@ -164,6 +180,8 @@ i {
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
         display: flex;
+        @include shadow;
+
         justify-content: space-between;
 
         &__tel {
@@ -292,6 +310,8 @@ i {
             width: 450px;
             margin: 0;
             background: url("../images/catch.png") 0 0 no-repeat;
+            @include shadowfilter;
+
             background-size: contain;
             left: 0px;
             top: 50px;
@@ -302,10 +322,15 @@ i {
                 position: absolute;
                 right: 40px;
                 bottom: 40px;
+                  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+
+
             }
         }
 
         &__logo {
+            @include shadowfilter;
+
             position: absolute;
             height: 218px;
             width: 580px;
@@ -334,6 +359,7 @@ i {
                 img {
                     height: 45px;
                     vertical-align: middle;
+                    @include shadowfilter;
                 }
             }
         }
@@ -380,8 +406,11 @@ i {
     position: relative;
     display: block;
 
-    @include backimage &__title {
+    @include backimage;
+
+    &__title {
         @include titlebase;
+        @include shadow;
         background-color: $white;
         margin-bottom: 58px;
     }
@@ -393,6 +422,10 @@ i {
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
         position: relative;
+        @include shadow;
+
+
+
 
 
         &__title {
@@ -412,6 +445,12 @@ i {
             display: flex;
             justify-content: center;
             align-items: center;
+            @include shadow;
+
+            img {
+                @include shadowfilter;
+
+            }
 
             span {
                 padding-left: 5px;
@@ -423,7 +462,7 @@ i {
         &__para {
             font-size: 1.2rem;
             padding: 35px;
-            line-height: 4.0rem;
+            line-height: 3.5rem;
             font-weight: bold;
             color: $brown;
 
@@ -433,6 +472,7 @@ i {
                 color: $orange;
                 display: inline-block;
                 background: linear-gradient(transparent 60%, $l-orange 0%);
+
 
             }
         }
@@ -448,6 +488,7 @@ i {
             position: absolute;
             top: 150px;
             left: 90px;
+            @include shadowfilter;
 
         }
 
@@ -462,6 +503,7 @@ i {
             position: absolute;
             top: 250px;
             right: 90px;
+            @include shadowfilter;
 
         }
 
@@ -477,6 +519,7 @@ i {
             position: absolute;
             top: 350px;
             left: 140px;
+            @include shadowfilter;
 
         }
     }
@@ -502,6 +545,7 @@ i {
 
                 img {
                     width: 100%;
+                    @include shadowfilter;
                 }
             }
 
@@ -510,6 +554,7 @@ i {
                 position: absolute;
                 bottom: 0;
                 right: 0;
+                @include shadow;
 
                 &__bar {
                     padding: 10px;
@@ -581,6 +626,7 @@ i {
             @include titlebase;
             @include backimage;
             margin-bottom: 48px;
+            @include shadow;
         }
 
         &__topics {
@@ -598,6 +644,7 @@ i {
                 margin-right: 25px;
                 border-radius: 5px 5px;
                 display: block;
+                @include shadow;
 
 
 
@@ -608,7 +655,6 @@ i {
                     height: 65px;
                     background-color: $orange;
                     border-radius: 50%;
-                    border: 3px solid $l-brown;
                     position: absolute;
                     top: -32px;
                     left: 0;
@@ -620,6 +666,7 @@ i {
                     color: $white;
                     font-weight: bold;
                     font-size: 1.2rem;
+                    @include shadow;
 
 
 
@@ -645,6 +692,7 @@ i {
                     background-size: contain;
                     background-repeat: no-repeat;
                     margin-bottom: 20px;
+                    @include shadowfilter;
 
                 }
 
@@ -657,6 +705,7 @@ i {
                     background-repeat: no-repeat;
                     margin-bottom: 10px;
 
+                    @include shadowfilter;
                 }
 
                 &__image3 {
@@ -667,6 +716,7 @@ i {
                     background-size: contain;
                     background-repeat: no-repeat;
                     margin-bottom: 30px;
+                    @include shadowfilter;
 
                 }
 
@@ -679,6 +729,7 @@ i {
                     background-repeat: no-repeat;
                     margin-bottom: 20px;
 
+                    @include shadowfilter;
                 }
 
                 &__para {
@@ -737,6 +788,7 @@ i {
         @include titlebase;
         background-color: $white;
         margin-bottom: 20px;
+        @include shadow;
     }
 
     &__area {
@@ -748,6 +800,7 @@ i {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include shadow;
 
         &__title {
             text-align: center;
@@ -770,6 +823,7 @@ i {
             padding: 20px;
             text-align: center;
             border-radius: 5px;
+            @include shadow;
 
             &__topics {
                 margin-bottom: 20px;
@@ -864,6 +918,7 @@ i {
         @include backimage;
         @include titlebase;
         margin-bottom: 58px;
+        @include shadow;
     }
 
     &__list {
@@ -872,6 +927,7 @@ i {
             padding: 1px;
 
             &__topic {
+                @include shadow;
                 margin: 0 auto;
                 border: 3px solid $l-brown;
                 border-radius: 5px 5px;
@@ -885,9 +941,8 @@ i {
                     height: 50px;
                     background-color: $orange;
                     border-radius: 50%;
-                    border: 3px solid $l-brown;
                     position: absolute;
-                    top: -40px;
+                    top: -35px;
                     left: 0;
                     right: 0;
                     margin: auto;
@@ -897,6 +952,7 @@ i {
                     color: $white;
                     font-weight: bold;
                     font-size: 1.2rem;
+                    @include shadow;
                 }
             }
         }
@@ -979,6 +1035,7 @@ p.answer {
 
     &__area {
 
+        @include shadow;
         padding: 30px 50px;
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
@@ -1145,6 +1202,7 @@ p.answer {
         img {
             height: 30px;
             padding: 0 5px;
+            @include shadowfilter;
         }
     }
 
@@ -1152,35 +1210,18 @@ p.answer {
 
 // トップに戻るボタン
 .topbtn {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     position: fixed;
-    right: 0;
+    right: 40px;
     bottom: 150px;
-    background: $orange;
-    border-radius: 50%;
-    border: 1px solid $white;
+    @include shadowfilter;
 }
 
 .topbtn:hover {
     opacity: 0.6;
 }
 
-.topbtn a {
-    display: block;
-    width: 80px;
-    height: 80px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-    font-size: 1.5rem;
-}
-
-.topbtn a span {
-    text-align: center;
-}
 
 // 個人情報保護
 .privacy {
@@ -1195,6 +1236,7 @@ p.answer {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include shadow;
 
         h2 {
             margin: 0;
@@ -1205,6 +1247,7 @@ p.answer {
     }
 
     &__area {
+        @include shadow;
         height: auto;
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
@@ -1371,6 +1414,7 @@ p.answer {
 
     .service {
         padding-top: 20px;
+
         &__title {
 
             margin-bottom: 43px;
@@ -1487,6 +1531,7 @@ p.answer {
     .faq {
         padding-top: 20px;
         padding-bottom: 20px;
+
         &__title {
             margin-bottom: 48px;
         }
