@@ -21,30 +21,61 @@
                 <h1 class="glheader__area__logoarea__logo"><a href="index.html"><img src="images/headerlogo.png" alt=""></a></h1>
             </div>
             <div class="glheader__box">
-                <ul class="glheader__box__tel">
-                    <a href="tel:07054637362" class="glheader__box__tel__topic">
-                        <li>
+                <ul class="glheader__box__topics">
+                    <a href="tel:07054637362">
+                        <li class="glheader__box__topics__tel">
                             <p><i class="fa fa-phone" aria-hidden="true"></i>070-5463-7362</p>
                         </li>
                     </a>
-                </ul>
-                <ul class="glheader__box__btn">
-                    <a href="#contact" class="glheader__box__btn__contact">
-                        <li>
-                            <p><i class="fa fa-envelope" aria-hidden="true"></i></p>
+                    <a href="#contact">
+                        <li class="glheader__box__topics__contact">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
                             <p>予約・お問合せ</p>
                         </li>
                     </a>
-                    <a href="#faq" class="glheader__box__btn__faq">
-                        <li>
-                            <p><i class="fa fa-question-circle" aria-hidden="true"></i></p>
+                    <a href="#faq">
+                        <li class="glheader__box__topics__faq">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>
                             <p>よくあるご質問</p>
                         </li>
                     </a>
                 </ul>
             </div>
         </div>
-        <div class="glheader__bottom"></div>
+        <div class="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>menu</span>
+        </div>
+        <nav class="glheader__nav globalMenuSp" id="articles-scroll">
+            <ul class="glheader__nav__topics w">
+                <a href="#service">
+                    <li class="glheader__nav__topics__topic">
+                        <img src="images/service.png" alt="">
+                        <p>サービス</p>
+                    </li>
+                </a>
+                <a href="#guide">
+                    <li class="glheader__nav__topics__topic">
+                        <img src="images/guide.png" alt="">
+                        <p>ご利用方法</p>
+                    </li>
+                </a>
+                <a href="#contact">
+                    <li class="glheader__nav__topics__topic">
+                        <img src="images/contact.png" alt="">
+                        <p>予約・お問い合わせ</p>
+                    </li>
+                </a>
+                <a href="#faq">
+                    <li class="glheader__nav__topics__topic">
+                        <img src="images/qanda.png" alt="">
+                        <p>よくあるご質問</p>
+                    </li>
+                </a>
+            </ul>
+        </nav>
     </header>
     <!-- トップイメージ -->
     <div class="topimage">
@@ -61,7 +92,7 @@
     <!-- メイン -->
     <main>
         <!-- サービス -->
-        <section class="service">
+        <section class="service" id="service">
             <div class="w">
                 <div class="service__title titlebox">
                     <h2><img src="images/service.png" alt=""></h2>
@@ -140,7 +171,7 @@
             </div>
         </section>
         <!-- ガイド -->
-        <section class="guide">
+        <section class="guide" id="guide">
             <div class="w guide__area">
                 <div class="guide__area__title titlebox">
                     <h2><img src="images/guide.png" alt=""></h2>
@@ -186,9 +217,9 @@
                 </ul>
             </div>
         </section>
-                <!-- お問い合わせ -->
-        <section class="contactform">
-            <div class="w" id="contact">
+        <!-- お問い合わせ -->
+        <section class="contactform" id="contact">
+            <div class="w">
                 <div class="contactform__title titlebox">
                     <h2><img src="images/contact.png" alt=""></h2>
                     <p>お問い合わせフォーム</p>
@@ -249,7 +280,7 @@
                 </div>
         </section>
         <!-- よくあるご質問 -->
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="w" id="faq">
                 <div class="faq__title titlebox">
                     <h2><img src="images/qanda.png" alt=""></h2>
@@ -290,7 +321,6 @@
                     </ul>
                 </div>
         </section>
-
     </main>
     <!-- トップに戻るボタン -->
     <div class="topbtn">
@@ -377,6 +407,29 @@
             var position = target.offset().top;
             $('body,html').animate({ scrollTop: position }, speed, 'swing');
             return false;
+        });
+    });
+    // ヘッダー固定
+    $(function() {
+        $(window).scroll(function() {
+
+            if ($(this).scrollTop() > 10) {
+                $('#articles-scroll').addClass('is-fixed');
+            } else {
+                $('#articles-scroll').removeClass('is-fixed');
+            }
+        });
+    });
+    // ハンバーガーメニュー
+    $(function() {
+        $('.navToggle').click(function() {
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $('.globalMenuSp').addClass('active');
+            } else {
+                $('.globalMenuSp').removeClass('active');
+            }
         });
     });
     </script>
