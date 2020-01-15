@@ -100,6 +100,11 @@ i {
     width: 990px;
     margin: 0 auto;
 }
+.fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
 
 // ヘッダー
 .glheader {
@@ -179,7 +184,7 @@ i {
         &__topics {
             display: flex;
             justify-content: space-between;
-            padding: 5px;
+            padding: 5px 0;
 
             &__tel {
                 font-size: 2.0rem;
@@ -433,7 +438,7 @@ i {
 // メイン
 // サービス
 .service {
-    padding-top: 70px;
+    padding-top: 55px;
     padding-bottom: 50px;
     position: relative;
     display: block;
@@ -648,7 +653,7 @@ i {
 
 // ガイド
 .guide {
-    padding-top: 70px;
+    padding-top: 55px;
     position: relative;
     display: block;
 
@@ -811,7 +816,7 @@ i {
 // コンタクト
 .contactform {
     @include backimage;
-    padding-top: 70px;
+    padding-top: 55px;
     position: relative;
     display: block;
     padding-bottom: 30px;
@@ -938,7 +943,7 @@ i {
 
 // よくあるご質問
 .faq {
-    padding-top: 70px;
+    padding-top: 55px;
     padding-bottom: 100px;
     position: relative;
     display: block;
@@ -992,8 +997,9 @@ i {
 p.question {
     margin: 0 auto 0 0;
     cursor: pointer;
-    padding: 20px;
-    font-size: 1.4rem;
+    padding: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: $brown;
 }
 
@@ -1022,7 +1028,8 @@ p.answer {
     display: none;
     margin: 0 20px 10px 20px;
     padding: 20px;
-    font-size: 1.4rem;
+    font-size: 1.0rem;
+    font-weight: bold;
 }
 
 
@@ -1218,11 +1225,13 @@ p.answer {
 
     &__nav {
         margin: 0 auto;
-        width: 60%;
+        width: 70%;
         display: flex;
         justify-content: space-between;
         font-size: 1.0rem;
+        font-weight: bold;
         margin-bottom: 15px;
+        letter-spacing: 0.2rem;
 
         a {
             color: $white;
