@@ -107,6 +107,30 @@ i {
     transition: all 1s;
 }
 
+.start {
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
 
 
 // ヘッダー
@@ -168,7 +192,8 @@ i {
                     text-indent: -9999px;
                     height: 75px;
                     background-size: contain;
-                    @include shadowfilter;
+                    filter: drop-shadow(0 1px 2px $white);
+
                 }
             }
 
@@ -177,6 +202,7 @@ i {
                 font-size: 1.4rem;
                 font-weight: bold;
                 margin-bottom: 5px;
+                filter: drop-shadow(2px 0px $white);
             }
         }
     }
@@ -257,7 +283,7 @@ i {
                 cursor: pointer;
                 margin-top: 5px;
                 // 浮く
-                box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
                 transition: all 0.3s ease 0s;
 
                 a {
@@ -352,6 +378,7 @@ i {
             width: 450px;
             margin: 0;
             background: url("../images/catch.png") 0 0 no-repeat;
+            filter: drop-shadow(2px 1px 1px $white);
             @include shadowfilter;
 
             background-size: contain;
@@ -371,7 +398,8 @@ i {
         }
 
         &__logo {
-            @include shadowfilter;
+            filter: drop-shadow(2px  1px 1px $white);
+            // @include shadowfilter;
 
             position: absolute;
             height: 218px;
@@ -839,7 +867,7 @@ i {
     padding-top: 55px;
     position: relative;
     display: block;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 
     &__title {
         @include titlebase;
@@ -887,6 +915,7 @@ i {
             padding: 20px;
             text-align: center;
             border-radius: 5px;
+            padding-bottom: 15px;
 
             &__topics {
                 margin-bottom: 20px;
@@ -1114,7 +1143,6 @@ p.answer {
         border: 3px solid $l-brown;
         border-radius: 5px 5px;
         background-color: $white;
-        margin-bottom: 20px;
 
 
 
@@ -1155,7 +1183,7 @@ p.answer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                @include shadow;
+                margin-bottom: 5px;
 
                 &__btn {
                     font-size: 2.4rem;
@@ -1193,6 +1221,11 @@ p.answer {
     height: 15px;
     background-size: 20px 20px;
     background-image: radial-gradient(circle at 10px 15px, $orange 12px, transparent 13px);
+}
+
+.calendarbox {
+    margin-bottom: 20px;
+    padding-bottom: 45px;
 }
 
 .shiny-btn1 {
@@ -1306,9 +1339,9 @@ p.answer {
 
 
 // 個人情報保護
-.privacy {
-    height: auto;
+.policy {
     padding-top: 30px;
+    padding-bottom: 50px;
 
     &__title {
         @include titlebase;
@@ -1350,6 +1383,8 @@ p.answer {
     }
 }
 
+
+
 /*スマホ用ウィンドウ幅が最大479pxまでの場合に適用*/
 @media screen and (max-width: 768px) {
     .w {
@@ -1371,12 +1406,16 @@ p.answer {
 
     // ヘッダー
     .glheader {
-        height: 280px;
+        height: 310px;
         padding-bottom: 20px;
         margin-bottom: 5px;
 
+        &__top {
+            padding-bottom: 50px;
+        }
+
         &__area {
-            height: 280px;
+            height: 310px;
             display: block;
 
             &__logoarea {
@@ -1385,11 +1424,14 @@ p.answer {
                 height: 120px;
 
                 &__catch {
+                    text-align: center;
+                    margin-top: 10px;
                     width: 100%;
                     margin-bottom: 5px;
                 }
 
                 &__logo {
+                    text-align: center;
                     width: auto;
                     height: auto;
                     max-width: 100%;
@@ -1502,13 +1544,14 @@ p.answer {
         right: 13px;
         top: 12px;
         width: 60px;
-        height: 55px;
+        height: 52px;
         border-radius: 5px;
         cursor: pointer;
         z-index: 3;
         background: $orange;
         text-align: center;
         border: 1px solid $white;
+        @include shadow;
 
         span {
             background-repeat: repeat-x;
@@ -1618,7 +1661,8 @@ p.answer {
     }
 
     .service {
-        padding-top: 20px;
+        padding-top: 30px;
+        padding-bottom: 40px;
 
         &__title {
 
@@ -1713,7 +1757,7 @@ p.answer {
     }
 
     .guide {
-        padding-top: 20px;
+        padding-top: 30px;
 
         &__area {
             &__title {
@@ -1723,6 +1767,7 @@ p.answer {
             &__topics {
                 width: 100%;
                 display: block;
+                padding-bottom: 40px;
 
                 &__topic {
                     width: 92%;
@@ -1739,23 +1784,11 @@ p.answer {
         }
     }
 
-    .faq {
-        padding-top: 20px;
-        padding-bottom: 20px;
 
-        &__title {
-            margin-bottom: 48px;
-        }
-
-        &__list {
-            width: 95%;
-            margin: 0 auto;
-        }
-    }
 
     .contactform {
-        padding-top: 20px;
-        padding-bottom: 90px;
+        padding-top: 30px;
+        padding-bottom: 40px;
 
         &__title {
 
@@ -1816,7 +1849,6 @@ p.answer {
             width: 90%;
             margin: 0 auto;
             padding: 15px 5px 15px 5px;
-            margin-bottom: 15px;
 
             &__para {
                 font-size: 1.4rem;
@@ -1845,6 +1877,7 @@ p.answer {
 
     .calendarbox {
         width: 90%;
+        margin-bottom: 15px;
 
         ul {
             padding: 15px;
@@ -1854,6 +1887,20 @@ p.answer {
             li iframe {
                 height: 350px;
             }
+        }
+    }
+
+    .faq {
+        padding-top: 30px;
+        padding-bottom: 20px;
+
+        &__title {
+            margin-bottom: 48px;
+        }
+
+        &__list {
+            width: 95%;
+            margin: 0 auto;
         }
     }
 
