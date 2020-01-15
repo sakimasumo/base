@@ -182,16 +182,17 @@ i {
             padding: 5px;
 
             &__tel {
-            font-size: 2.0rem;
-            font-weight: bold;
-            width: 260px;
-                padding: 10px 0 ;
+                font-size: 2.0rem;
+                font-weight: bold;
+                width: 260px;
+                padding: 10px 0;
                 height: 50px;
                 @include btn;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                &:hover{
+
+                &:hover {
                     @include btnhover;
                 }
             }
@@ -203,7 +204,8 @@ i {
                 height: 50px;
                 @include btn;
                 text-align: center;
-                &:hover{
+
+                &:hover {
                     @include btnhover;
                 }
             }
@@ -215,7 +217,8 @@ i {
                 height: 50px;
                 @include btn;
                 text-align: center;
-                &:hover{
+
+                &:hover {
                     @include btnhover;
                 }
             }
@@ -231,8 +234,9 @@ i {
         &__topics {
             display: flex;
             justify-content: space-between;
+
             a {
-                color:$orange;
+                color: $orange;
             }
 
             &__topic {
@@ -265,7 +269,6 @@ i {
 
                 &:hover {
                     @include btnhover;
-                    opacity: 0.8;
                 }
             }
         }
@@ -321,15 +324,14 @@ i {
 // トップイメージ
 .topimage {
     display: block;
-    height: 660px;
+    height: 630px;
     position: relative;
 
     background: $white url("../images/heroimage2.png") left bottom repeat-x;
-    height: 660px;
 
     &__area {
         display: block;
-        height: 660px;
+        height: 630px;
         position: relative;
 
 
@@ -459,18 +461,17 @@ i {
 
 
         &__title {
-            width: 250px;
+            width: 256px;
             height: 70px;
             font-size: 1.2rem;
             position: absolute;
-            background-color: $l-brown;
+            background-color: $orange;
             top: -33px;
             left: 0;
             right: 0;
             margin: auto;
             color: $orange;
             line-height: 0.8rem;
-            border: 3px solid $l-brown;
             border-radius: 5px 5px;
             display: flex;
             justify-content: center;
@@ -478,7 +479,6 @@ i {
 
 
             img {
-                filter: drop-shadow(0 2px 1px rgb(255, 255, 255));
 
             }
 
@@ -615,7 +615,9 @@ i {
         }
     }
 }
-
+ .brs {
+        display: none;
+    }
 
 
 .service::before {
@@ -852,7 +854,6 @@ i {
             padding: 20px;
             text-align: center;
             border-radius: 5px;
-            @include shadow;
 
             &__topics {
                 margin-bottom: 20px;
@@ -901,7 +902,7 @@ i {
 
 .formarea {
     width: 450px;
-    border: 1px dotted $l-brown;
+    border: 2px dotted $l-brown;
     border-radius: 5px 5px;
     padding: 8px;
     margin-left: 10px;
@@ -1095,7 +1096,7 @@ p.answer {
                 margin-bottom: 15px;
 
                 &__number {
-                    font-size: 3.2rem;
+                    font-size: 3.6rem;
                     font-weight: bold;
                 }
             }
@@ -1113,7 +1114,7 @@ p.answer {
                 @include shadow;
 
                 &__btn {
-                    font-size: 2.0rem;
+                    font-size: 2.4rem;
                     font-weight: bold;
                 }
             }
@@ -1211,7 +1212,8 @@ p.answer {
     background-color: $orange;
     color: $white;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 1.0rem;
     padding-top: 25px;
 
     &__nav {
@@ -1229,9 +1231,12 @@ p.answer {
     }
 
     &__copy {
+        &__small {
+            padding-bottom: 5px;
+        }
         img {
-            height: 30px;
-            padding: 0 5px;
+            height: 40px;
+            padding-left: 5px;
             @include shadowfilter;
         }
     }
@@ -1319,12 +1324,12 @@ p.answer {
 
     // ヘッダー
     .glheader {
-        height: 350px;
+        height: 255px;
         padding-bottom: 20px;
         margin-bottom: 5px;
 
         &__area {
-            height: 305px;
+            height: 255px;
             display: block;
 
             &__logoarea {
@@ -1347,42 +1352,45 @@ p.answer {
         }
 
         &__box {
-            width: 95%;
+            width: 90%;
             margin: 0 auto;
-            display: block;
-            padding: 15px 0;
 
-            &__tel {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 0;
-                margin-bottom: 10px;
+            &__topics {
+                display: block;
+                padding: 0;
 
-                &__topic {
-                    font-size: 2.4rem;
-                    color: $orange;
-                }
-            }
-
-            &__btn {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                margin: 0;
-
-                &__contact,
-                &__faq {
-                    font-size: 1.2rem;
+                &__tel {
                     width: 100%;
-                    margin: 5px;
+                    height: 30px;
+                    padding: 5px 0;
                 }
 
+                &__contact {
+                    width: 49%;
+                    height: 30px;
+                    padding: 5px 0;
+                    float: left;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 1.0rem;
+                    align-items: center;
+                }
+
+                &__faq {
+                    width: 49%;
+                    float: right;
+                    height: 30px;
+                    padding: 5px 0;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 1.0rem;
+                    align-items: center;
+
+                }
             }
         }
 
-        &__nav {}
+
     }
 
     // ハンバーガーメニュー用
@@ -1401,18 +1409,30 @@ p.answer {
             padding: 0;
             width: 100%;
 
-            background-color: $l-orange;
+            background-color: transparent;
 
-            li {
-                height: 50px;
-                padding: 0;
-                width: 100%;
+            a {
+                display: block;
 
-
-                a {
-                    display: block;
-                    margin-bottom: 5px;
+                li {
+                    margin: 0;
+                    display: inline-flex;
+                    align-items: center;
+                    height: 25px;
+                    padding: 10px 0;
+                    width: 100%;
+                    img {
+                        height: 20px;
+                        padding-left: 30px;
+                        padding-right: 10px;
+                    }
+                    p {
+                        line-height: 1.8rem;
+                        font-size: 0.8rem;
+                    }
                 }
+
+
             }
         }
     }
@@ -1607,7 +1627,8 @@ p.answer {
                 }
 
                 &__price {
-                    width: 90%;
+                    width: 95%;
+                    margin: 0 auto;
 
                     &__bar {
                         font-size: 1.1rem;
@@ -1629,6 +1650,9 @@ p.answer {
             margin-bottom: 15px;
         }
 
+    }
+    .brss {
+        display: none;
     }
 
     .service__intro__icons {
