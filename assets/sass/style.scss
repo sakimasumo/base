@@ -100,11 +100,14 @@ i {
     width: 990px;
     margin: 0 auto;
 }
+
 .fadein {
-  opacity : 0;
-  transform: translateY(20px);
-  transition: all 1s;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
 }
+
+
 
 // ヘッダー
 .glheader {
@@ -171,9 +174,9 @@ i {
 
             &__catch {
                 color: $brown;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
                 font-weight: bold;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
             }
         }
     }
@@ -233,7 +236,7 @@ i {
 
 
     &__nav {
-        height: 80px;
+        height: 90px;
         margin: 0 auto;
 
         &__topics {
@@ -248,7 +251,7 @@ i {
                 width: 230px;
                 text-align: center;
                 background-color: $white;
-                padding: 5px;
+                padding: 10px 5px;
                 border-radius: 5px 5px;
                 display: inline-block;
                 cursor: pointer;
@@ -266,10 +269,16 @@ i {
                     height: 25px;
                     max-width: 100%;
                     max-height: 100%;
+                    margin-bottom: 5px;
+                    filter: drop-shadow(1px 1px 0 $l-orange);
+
                 }
 
                 p {
                     text-align: center;
+                    font-weight: bold;
+                    font-size: 1.0rem;
+                    filter: drop-shadow(1px 1px 0 $l-orange);
                 }
 
                 &:hover {
@@ -320,10 +329,6 @@ i {
 
 
 }
-
-
-
-
 
 // トップページ
 // トップイメージ
@@ -450,6 +455,14 @@ i {
         @include shadow;
         background-color: $white;
         margin-bottom: 58px;
+
+        h2 img {
+            filter: drop-shadow(1px 1px 0 $l-orange);
+        }
+
+        p {
+            filter: drop-shadow(1px 1px 0 $l-orange);
+        }
     }
 
     &__intro {
@@ -483,9 +496,7 @@ i {
             align-items: center;
 
 
-            img {
-
-            }
+            img {}
 
             span {
                 color: $white;
@@ -620,9 +631,10 @@ i {
         }
     }
 }
- .brs {
-        display: none;
-    }
+
+.brs {
+    display: none;
+}
 
 
 .service::before {
@@ -664,6 +676,14 @@ i {
             @include backimage;
             margin-bottom: 48px;
             @include shadow;
+
+            h2 img {
+                filter: drop-shadow(1px 1px 0 $white);
+            }
+
+            p {
+                filter: drop-shadow(1px 1px 0 $white);
+            }
         }
 
         &__topics {
@@ -826,6 +846,14 @@ i {
         background-color: $white;
         margin-bottom: 20px;
         @include shadow;
+
+        h2 img {
+            filter: drop-shadow(1px 1px 0 $l-orange);
+        }
+
+        p {
+            filter: drop-shadow(1px 1px 0 $l-orange);
+        }
     }
 
     &__area {
@@ -954,7 +982,16 @@ i {
         @include titlebase;
         margin-bottom: 58px;
         @include shadow;
+
+        h2 img {
+            filter: drop-shadow(1px 1px 0 $white);
+        }
+
+        p {
+            filter: drop-shadow(1px 1px 0 $white);
+        }
     }
+
 
     &__list {
         &__topics {
@@ -1243,6 +1280,7 @@ p.answer {
         &__small {
             padding-bottom: 5px;
         }
+
         img {
             height: 40px;
             padding-left: 5px;
@@ -1273,8 +1311,8 @@ p.answer {
     padding-top: 30px;
 
     &__title {
-
         @include titlebase;
+        padding-top: 0;
         background-color: $white;
         margin-bottom: 20px;
         display: flex;
@@ -1333,12 +1371,12 @@ p.answer {
 
     // ヘッダー
     .glheader {
-        height: 255px;
+        height: 280px;
         padding-bottom: 20px;
         margin-bottom: 5px;
 
         &__area {
-            height: 255px;
+            height: 280px;
             display: block;
 
             &__logoarea {
@@ -1370,13 +1408,14 @@ p.answer {
 
                 &__tel {
                     width: 100%;
-                    height: 30px;
+                    height: 40px;
                     padding: 5px 0;
+                    margin-bottom: 5px;
                 }
 
                 &__contact {
                     width: 49%;
-                    height: 30px;
+                    height: 40px;
                     padding: 5px 0;
                     float: left;
                     display: flex;
@@ -1388,7 +1427,7 @@ p.answer {
                 &__faq {
                     width: 49%;
                     float: right;
-                    height: 30px;
+                    height: 40px;
                     padding: 5px 0;
                     display: flex;
                     justify-content: center;
@@ -1427,14 +1466,16 @@ p.answer {
                     margin: 0;
                     display: inline-flex;
                     align-items: center;
-                    height: 25px;
+                    height: 40px;
                     padding: 10px 0;
                     width: 100%;
+
                     img {
                         height: 20px;
                         padding-left: 30px;
                         padding-right: 10px;
                     }
+
                     p {
                         line-height: 1.8rem;
                         font-size: 0.8rem;
@@ -1460,12 +1501,12 @@ p.answer {
         /* bodyに対しての絶対位置指定 */
         right: 13px;
         top: 12px;
-        width: 42px;
-        height: 51px;
+        width: 60px;
+        height: 55px;
         border-radius: 5px;
         cursor: pointer;
         z-index: 3;
-        background: $l-orange;
+        background: $orange;
         text-align: center;
         border: 1px solid $white;
 
@@ -1474,8 +1515,8 @@ p.answer {
             display: block;
             position: absolute;
             /* .navToggleに対して */
-            width: 30px;
-            border-bottom: solid 3px $orange;
+            width: 46px;
+            border-bottom: solid 3px $white;
             -webkit-transition: .35s ease-in-out;
             -moz-transition: .35s ease-in-out;
             transition: .35s ease-in-out;
@@ -1498,8 +1539,8 @@ p.answer {
 
     .navToggle span:nth-child(4) {
         border: none;
-        color: $orange;
-        font-size: 9px;
+        color: $white;
+        font-size: 0.9rem;
         font-weight: bold;
         top: 34px;
     }
@@ -1519,11 +1560,11 @@ p.answer {
 
     // トップイメージ
     .topimage {
-        height: 480px;
+        height: 440px;
 
         &__area {
             width: 95%;
-            height: 480px;
+            height: 440px;
 
             &__catch {
                 width: 98%;
@@ -1585,9 +1626,10 @@ p.answer {
         }
 
         &__intro {
-            width: 98%;
+            width: 99%;
             margin: 0 auto;
             padding: 0;
+            border: none;
 
             &__title {}
 
@@ -1660,6 +1702,7 @@ p.answer {
         }
 
     }
+
     .brss {
         display: none;
     }
@@ -1682,7 +1725,7 @@ p.answer {
                 display: block;
 
                 &__topic {
-                    width: 75%;
+                    width: 92%;
                     margin: 0 auto;
                     padding: 0;
                     margin-bottom: 40px;
@@ -1831,7 +1874,15 @@ p.answer {
     }
 
     .topbtn {
-        bottom: 70px;
+        bottom: 50px;
+        right: 0px;
+        width: 65px;
+        height: 65px;
+
+        img {
+            width: 65px;
+            height: 65px;
+        }
     }
 
     .privacy {

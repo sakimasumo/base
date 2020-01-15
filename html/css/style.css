@@ -90,9 +90,9 @@ i {
 
 .glheader__area__logoarea__catch {
   color: #4b4539;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .glheader__box {
@@ -172,7 +172,7 @@ i {
 }
 
 .glheader__nav {
-  height: 80px;
+  height: 90px;
   margin: 0 auto;
 }
 
@@ -189,7 +189,7 @@ i {
   width: 230px;
   text-align: center;
   background-color: #fff;
-  padding: 5px;
+  padding: 10px 5px;
   border-radius: 5px 5px;
   display: inline-block;
   cursor: pointer;
@@ -207,10 +207,15 @@ i {
   height: 25px;
   max-width: 100%;
   max-height: 100%;
+  margin-bottom: 5px;
+  filter: drop-shadow(1px 1px 0 #fbd9b5);
 }
 
 .glheader__nav__topics__topic p {
   text-align: center;
+  font-weight: bold;
+  font-size: 1.0rem;
+  filter: drop-shadow(1px 1px 0 #fbd9b5);
 }
 
 .glheader__nav__topics__topic:hover {
@@ -380,6 +385,14 @@ i {
   margin-top: 8px;
   font-weight: bold;
   font-size: 1.0rem;
+}
+
+.service__title h2 img {
+  filter: drop-shadow(1px 1px 0 #fbd9b5);
+}
+
+.service__title p {
+  filter: drop-shadow(1px 1px 0 #fbd9b5);
 }
 
 .service__intro {
@@ -593,6 +606,14 @@ i {
   font-size: 1.0rem;
 }
 
+.guide__area__title h2 img {
+  filter: drop-shadow(1px 1px 0 #fff);
+}
+
+.guide__area__title p {
+  filter: drop-shadow(1px 1px 0 #fff);
+}
+
 .guide__area__topics {
   display: flex;
   justify-content: space-between;
@@ -761,6 +782,14 @@ i {
   font-size: 1.0rem;
 }
 
+.contactform__title h2 img {
+  filter: drop-shadow(1px 1px 0 #fbd9b5);
+}
+
+.contactform__title p {
+  filter: drop-shadow(1px 1px 0 #fbd9b5);
+}
+
 .contactform__area {
   background-color: #fff;
   padding: 30px 0;
@@ -913,6 +942,14 @@ i {
   margin-top: 8px;
   font-weight: bold;
   font-size: 1.0rem;
+}
+
+.faq__title h2 img {
+  filter: drop-shadow(1px 1px 0 #fff);
+}
+
+.faq__title p {
+  filter: drop-shadow(1px 1px 0 #fff);
 }
 
 .faq__list__topics {
@@ -1229,6 +1266,7 @@ p.answer {
   text-align: center;
   margin: 0 auto;
   border-radius: 5px 5px;
+  padding-top: 0;
   background-color: #fff;
   margin-bottom: 20px;
   display: flex;
@@ -1295,12 +1333,12 @@ p.answer {
     text-decoration: none;
   }
   .glheader {
-    height: 255px;
+    height: 280px;
     padding-bottom: 20px;
     margin-bottom: 5px;
   }
   .glheader__area {
-    height: 255px;
+    height: 280px;
     display: block;
   }
   .glheader__area__logoarea {
@@ -1328,12 +1366,13 @@ p.answer {
   }
   .glheader__box__topics__tel {
     width: 100%;
-    height: 30px;
+    height: 40px;
     padding: 5px 0;
+    margin-bottom: 5px;
   }
   .glheader__box__topics__contact {
     width: 49%;
-    height: 30px;
+    height: 40px;
     padding: 5px 0;
     float: left;
     display: flex;
@@ -1344,7 +1383,7 @@ p.answer {
   .glheader__box__topics__faq {
     width: 49%;
     float: right;
-    height: 30px;
+    height: 40px;
     padding: 5px 0;
     display: flex;
     justify-content: center;
@@ -1374,7 +1413,7 @@ p.answer {
     margin: 0;
     display: inline-flex;
     align-items: center;
-    height: 25px;
+    height: 40px;
     padding: 10px 0;
     width: 100%;
   }
@@ -1396,12 +1435,12 @@ p.answer {
     /* bodyに対しての絶対位置指定 */
     right: 13px;
     top: 12px;
-    width: 42px;
-    height: 51px;
+    width: 60px;
+    height: 55px;
     border-radius: 5px;
     cursor: pointer;
     z-index: 3;
-    background: #fbd9b5;
+    background: #F4810E;
     text-align: center;
     border: 1px solid #fff;
   }
@@ -1410,8 +1449,8 @@ p.answer {
     display: block;
     position: absolute;
     /* .navToggleに対して */
-    width: 30px;
-    border-bottom: solid 3px #F4810E;
+    width: 46px;
+    border-bottom: solid 3px #fff;
     -webkit-transition: .35s ease-in-out;
     -moz-transition: .35s ease-in-out;
     transition: .35s ease-in-out;
@@ -1428,8 +1467,8 @@ p.answer {
   }
   .navToggle span:nth-child(4) {
     border: none;
-    color: #F4810E;
-    font-size: 9px;
+    color: #fff;
+    font-size: 0.9rem;
     font-weight: bold;
     top: 34px;
   }
@@ -1445,11 +1484,11 @@ p.answer {
     transform: rotate(45deg);
   }
   .topimage {
-    height: 480px;
+    height: 440px;
   }
   .topimage__area {
     width: 95%;
-    height: 480px;
+    height: 440px;
   }
   .topimage__area__catch {
     width: 98%;
@@ -1496,9 +1535,10 @@ p.answer {
     margin-bottom: 43px;
   }
   .service__intro {
-    width: 98%;
+    width: 99%;
     margin: 0 auto;
     padding: 0;
+    border: none;
   }
   .service__intro__para {
     padding: 0;
@@ -1566,7 +1606,7 @@ p.answer {
     display: block;
   }
   .guide__area__topics__topic {
-    width: 75%;
+    width: 92%;
     margin: 0 auto;
     padding: 0;
     margin-bottom: 40px;
@@ -1675,7 +1715,14 @@ p.answer {
     padding-bottom: 15px;
   }
   .topbtn {
-    bottom: 70px;
+    bottom: 50px;
+    right: 0px;
+    width: 65px;
+    height: 65px;
+  }
+  .topbtn img {
+    width: 65px;
+    height: 65px;
   }
   .privacy__area {
     width: 95%;
