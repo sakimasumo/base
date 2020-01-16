@@ -135,7 +135,7 @@ i {
 
 // ヘッダー
 .glheader {
-    height: auto;
+    height: 235px;
     @include backimage;
 
 
@@ -208,27 +208,24 @@ i {
     }
 
     &__box {
-        width: 60%;
+        width: 62%;
 
         &__topics {
-            display: flex;
-            justify-content: space-between;
             padding: 5px 0;
 
             &__tel {
-                margin: 5px;
-                background-color: $white;
-                border: 2px solid $green;
+                margin: 20px 0 0 0;
                 border-radius: 5px;
-                font-size: 2.0rem;
+                font-size: 3.2rem;
                 font-weight: bold;
-                width: 260px;
-                padding: 10px 0;
+                padding: 25px 0 0 0;
                 height: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 color: $green;
+                float: right;
+                filter: drop-shadow(1px 0px $white);
 
 
             }
@@ -251,6 +248,7 @@ i {
                 &:hover {
                     @include btnhover;
                 }
+                display: none;
             }
 
             &__faq {
@@ -266,6 +264,7 @@ i {
                 &:hover {
                     @include btnhover;
                 }
+                display: none;
             }
 
         }
@@ -273,7 +272,7 @@ i {
 
 
     &__nav {
-        height: 90px;
+        height: 95px;
         margin: 0 auto;
 
         &__topics {
@@ -288,14 +287,14 @@ i {
                 width: 230px;
                 text-align: center;
                 background-color: $white;
-                padding: 10px 5px;
+                padding: 5px 5px;
                 border-radius: 5px 5px;
                 display: inline-block;
                 cursor: pointer;
-                margin-top: 5px;
                 // 浮く
                 box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
                 transition: all 0.3s ease 0s;
+                margin-top: 5px;
 
                 a {
                     text-decoration: none;
@@ -303,10 +302,10 @@ i {
 
                 img {
                     width: auto;
-                    height: 25px;
+                    padding: 3px 0;
+                    height: 23px;
                     max-width: 100%;
                     max-height: 100%;
-                    margin-bottom: 5px;
                     filter: drop-shadow(1px 1px 0 $l-orange);
 
                 }
@@ -314,7 +313,7 @@ i {
                 p {
                     text-align: center;
                     font-weight: bold;
-                    font-size: 1.0rem;
+                    font-size: 0.9rem;
                     filter: drop-shadow(1px 1px 0 $l-orange);
                 }
 
@@ -371,14 +370,14 @@ i {
 // トップイメージ
 .topimage {
     display: block;
-    height: 630px;
+    height: 600px;
     position: relative;
 
     background: $white url("../images/heroimage2.png") left bottom repeat-x;
 
     &__area {
         display: block;
-        height: 630px;
+        height: 600px;
         position: relative;
 
 
@@ -394,7 +393,7 @@ i {
 
             background-size: contain;
             left: 0px;
-            top: 50px;
+            top: 30px;
         }
 
         &__hero {
@@ -417,7 +416,7 @@ i {
             width: 580px;
             background: url("../images/logo.png") 0 0 no-repeat;
             left: 00px;
-            top: 230px;
+            top: 210px;
         }
 
         &__bar {
@@ -1120,11 +1119,11 @@ p.question:hover {
 p.answer {
     color: $orange;
     display: none;
+    padding: 0 40px;
     margin: 0 20px 10px 20px;
-    padding: 20px;
     font-size: 1.3rem;
     font-weight: bold;
-    line-height: 1.6rem;
+    line-height: 2.0rem;
 }
 
 
@@ -1316,6 +1315,59 @@ p.answer {
         opacity: 0;
     }
 }
+.shiny-btn2 {
+    display: block;
+    position: relative;
+    width: 100%;
+    /*ボタンの幅*/
+    margin: 0 auto;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.shiny-btn2:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.shiny-btn2::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn2 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes shiny-btn2 {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
 
 
 // フッター
@@ -1413,13 +1465,16 @@ p.answer {
                 margin-bottom: 15px;
 
                 h3 {
+                    color:$brown;
                     text-align: center;
                     margin: 10px;
                     font-size: 1.2rem;
+                    line-height: 2.0rem;
                 }
 
                 p {
-                    line-height: 1.4rem;
+                    color:$brown;
+                    line-height: 2.0rem;
                     margin-bottom: 30px;
                 }
             }
@@ -1450,7 +1505,7 @@ p.answer {
 
     // ヘッダー
     .glheader {
-        height: 310px;
+        height: 320px;
         padding-bottom: 20px;
         margin-bottom: 5px;
 
@@ -1495,9 +1550,9 @@ p.answer {
 
                 &__tel {
                     font-size: 2.2rem;
-                    width: 99%;
+                    width: 100%;
                     height: 40px;
-                    padding: 5px 0;
+                    padding: 10px 0;
                     margin: 5px 0;
                     @include btn;
                     text-align: center;
@@ -2022,7 +2077,7 @@ p.answer {
 
     .policy {
         &__area {
-            width: 95%;
+            width: 93%;
             margin: 0 auto;
             margin-bottom: 30px;
         }
