@@ -130,23 +130,30 @@ i {
 }
 
 .glheader__box__topics__tel {
-  margin: 5px;
-  background-color: #fff;
-  border: 2px solid #83b33c;
-  border-radius: 5px;
   font-size: 2.0rem;
   font-weight: bold;
   width: 260px;
   padding: 10px 0;
   height: 50px;
+  background-color: #83b33c;
+  color: #fff;
+  border-radius: 5px 5px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 5px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease 0s;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #83b33c;
+}
+
+.glheader__box__topics__tel:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
 }
 
 .glheader__box__topics__contact {
-  border: 2px solid #83b33c;
   font-size: 1.0rem;
   width: 170px;
   padding: 10px 0 10px 0;
@@ -160,7 +167,6 @@ i {
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease 0s;
   text-align: center;
-  margin-right: 5px;
 }
 
 .glheader__box__topics__contact p {
@@ -173,7 +179,6 @@ i {
 }
 
 .glheader__box__topics__faq {
-  border: 2px solid #83b33c;
   font-size: 1.2rem;
   width: 150px;
   padding: 10px 0 10px 0;
@@ -1064,7 +1069,6 @@ p.answer {
   padding: 20px;
   font-size: 1.3rem;
   font-weight: bold;
-  line-height: 1.6rem;
 }
 
 .faq::before {
@@ -1122,11 +1126,15 @@ p.answer {
 
 .contact__area__topics__tel {
   height: 90px;
+  background-color: #83b33c;
+  color: #fff;
+  border-radius: 5px 5px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 5px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease 0s;
   display: flex;
-  color: #83b33c;
-  background-color: #fff;
-  border: 3px solid #83b33c;
-  border-radius: 5px;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
@@ -1135,6 +1143,11 @@ p.answer {
 .contact__area__topics__tel__number {
   font-size: 3.6rem;
   font-weight: bold;
+}
+
+.contact__area__topics__tel:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
 }
 
 .contact__area__topics__mail {
@@ -1273,17 +1286,12 @@ p.answer {
   text-decoration: none;
 }
 
-.glfooter__copy {
-  font-size: 0.9rem;
-  padding-top: 10px;
-}
-
 .glfooter__copy__small {
   padding-bottom: 5px;
 }
 
 .glfooter__copy img {
-  height: 20px;
+  height: 40px;
   padding-left: 5px;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 }
@@ -1358,18 +1366,12 @@ p.answer {
 }
 
 .policy__area__topics__topic {
+  text-align: center;
   margin-bottom: 15px;
 }
 
 .policy__area__topics__topic h3 {
-  text-align: center;
   margin: 10px;
-  font-size: 1.2rem;
-}
-
-.policy__area__topics__topic p {
-  line-height: 1.4rem;
-  margin-bottom: 30px;
 }
 
 /*スマホ用ウィンドウ幅が最大479pxまでの場合に適用*/
@@ -1419,7 +1421,6 @@ p.answer {
   }
   .glheader__box {
     width: 90%;
-    height: 120px;
     margin: 0 auto;
   }
   .glheader__box__topics {
@@ -1427,27 +1428,13 @@ p.answer {
     padding: 0;
   }
   .glheader__box__topics__tel {
-    font-size: 2.2rem;
-    width: 99%;
+    width: 100%;
     height: 40px;
     padding: 5px 0;
-    margin: 5px 0;
-    background-color: #83b33c;
-    color: #fff;
-    border-radius: 5px 5px;
-    display: inline-block;
-    cursor: pointer;
-    margin-top: 5px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease 0s;
-    text-align: center;
-  }
-  .glheader__box__topics__tel:hover {
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
-    transform: translateY(-0.1875em);
+    margin-bottom: 5px;
   }
   .glheader__box__topics__contact {
-    width: 48%;
+    width: 49%;
     height: 40px;
     padding: 5px 0;
     float: left;
@@ -1455,13 +1442,12 @@ p.answer {
     justify-content: center;
     font-size: 0.8rem;
     align-items: center;
-    margin-right: 0;
   }
   .glheader__box__topics__contact p {
     padding: 0;
   }
   .glheader__box__topics__faq {
-    width: 48%;
+    width: 49%;
     float: right;
     height: 40px;
     padding: 5px 0;
@@ -1760,26 +1746,8 @@ p.answer {
   .contact__area__topics {
     width: 100%;
   }
-  .contact__area__topics__tel {
-    background-color: #83b33c;
-    color: #fff;
-    border-radius: 5px 5px;
-    display: inline-block;
-    cursor: pointer;
-    margin-top: 5px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease 0s;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
   .contact__area__topics__tel__number {
     font-size: 2.6rem;
-  }
-  .contact__area__topics__tel:hover {
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
-    transform: translateY(-0.1875em);
   }
   .contact__area__topics__mail {
     padding-right: 5px;
