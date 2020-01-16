@@ -185,12 +185,12 @@ i {
         &__logoarea {
             height: 100px;
             margin-bottom: 10px;
-            width: 30%;
+            width: 35%;
 
             &__logo {
                 img {
                     text-indent: -9999px;
-                    height: 75px;
+                    height: 77px;
                     background-size: contain;
                     filter: drop-shadow(0 1px 2px $white);
 
@@ -199,7 +199,7 @@ i {
 
             &__catch {
                 color: $brown;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 font-weight: bold;
                 margin-bottom: 5px;
                 filter: drop-shadow(2px 0px $white);
@@ -208,7 +208,7 @@ i {
     }
 
     &__box {
-        width: 57%;
+        width: 60%;
 
         &__topics {
             display: flex;
@@ -232,12 +232,15 @@ i {
             }
 
             &__contact {
-                font-size: 1.2rem;
-                width: 140px;
+                font-size: 1.0rem;
+                width: 170px;
                 padding: 10px 0 10px 0;
                 height: 50px;
                 @include btn;
                 text-align: center;
+                p {
+                    padding-top: 4px;
+                }
 
                 &:hover {
                     @include btnhover;
@@ -246,7 +249,7 @@ i {
 
             &__faq {
                 font-size: 1.2rem;
-                width: 140px;
+                width: 150px;
                 padding: 10px 0 10px 0;
                 height: 50px;
                 @include btn;
@@ -398,7 +401,7 @@ i {
         }
 
         &__logo {
-            filter: drop-shadow(2px  1px 1px $white);
+            filter: drop-shadow(2px 1px 1px $white);
             // @include shadowfilter;
 
             position: absolute;
@@ -471,7 +474,7 @@ i {
 // メイン
 // サービス
 .service {
-    padding-top: 55px;
+    padding-top: 65px;
     padding-bottom: 50px;
     position: relative;
     display: block;
@@ -507,7 +510,7 @@ i {
 
 
         &__title {
-            width: 256px;
+            width: 300px;
             height: 70px;
             font-size: 1.2rem;
             position: absolute;
@@ -524,7 +527,10 @@ i {
             align-items: center;
 
 
-            img {}
+            img {
+                height: 45px;
+                width: auto;
+            }
 
             span {
                 color: $white;
@@ -535,14 +541,14 @@ i {
         }
 
         &__para {
-            font-size: 1.2rem;
-            padding: 35px;
+            font-size: 1.4rem;
+            padding: 40px;
             line-height: 3.5rem;
             font-weight: bold;
             color: $brown;
 
             &__span {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 font-weight: bold;
                 color: $orange;
                 display: inline-block;
@@ -693,7 +699,7 @@ i {
 
 // ガイド
 .guide {
-    padding-top: 55px;
+    padding-top: 65px;
     position: relative;
     display: block;
 
@@ -717,7 +723,7 @@ i {
         &__topics {
             display: flex;
             justify-content: space-between;
-            padding-bottom: 50px;
+            padding-bottom: 30px;
 
             &__topic {
                 height: 260px;
@@ -829,6 +835,20 @@ i {
 
             }
         }
+
+        &__para {
+
+            margin: 0 auto;
+            padding-bottom: 50px;
+
+            p {
+                text-align: center;
+                font-size: 1.8rem;
+                font-weight: bold;
+                line-height: 2.0rem;
+                color: $orange;
+            }
+        }
     }
 
     &__last__topic {
@@ -864,7 +884,7 @@ i {
 // コンタクト
 .contactform {
     @include backimage;
-    padding-top: 55px;
+    padding-top: 65px;
     position: relative;
     display: block;
     padding-bottom: 50px;
@@ -1000,7 +1020,7 @@ i {
 
 // よくあるご質問
 .faq {
-    padding-top: 55px;
+    padding-top: 65px;
     padding-bottom: 100px;
     position: relative;
     display: block;
@@ -1052,7 +1072,7 @@ i {
                     align-items: center;
                     color: $white;
                     font-weight: bold;
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                     @include shadow;
                 }
             }
@@ -1064,7 +1084,7 @@ p.question {
     margin: 0 auto 0 0;
     cursor: pointer;
     padding: 40px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: $brown;
 }
@@ -1094,7 +1114,7 @@ p.answer {
     display: none;
     margin: 0 20px 10px 20px;
     padding: 20px;
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -1147,6 +1167,7 @@ p.answer {
 
 
         &__para {
+            line-height: 2.0rem;
             text-align: center;
             margin-bottom: 20px;
             font-size: 1.8rem;
@@ -1183,7 +1204,7 @@ p.answer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-bottom: 5px;
+                margin-bottom: 15px;
 
                 &__btn {
                     font-size: 2.4rem;
@@ -1196,6 +1217,9 @@ p.answer {
             }
         }
     }
+}
+.telpara {
+    font-size: 2.6rem;
 }
 
 .contact::before {
@@ -1767,7 +1791,7 @@ p.answer {
             &__topics {
                 width: 100%;
                 display: block;
-                padding-bottom: 40px;
+                padding-bottom: 10px;
 
                 &__topic {
                     width: 92%;
@@ -1779,6 +1803,15 @@ p.answer {
 
                 &__topic:last-child {
                     margin-bottom: 0;
+                }
+            }
+
+            &__para {
+                width: 95%;
+                padding-bottom: 40px;
+
+                p {
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -1903,6 +1936,12 @@ p.answer {
             margin: 0 auto;
         }
     }
+    p.question {
+        font-size: 1.2rem;
+    }
+    p.answer {
+        font-size: 1.0rem;
+    }
 
     .glfooter {
         height: auto;
@@ -1932,11 +1971,11 @@ p.answer {
         }
     }
 
-    .privacy {
+    .policy {
         &__area {
             width: 95%;
             margin: 0 auto;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
     }
 }

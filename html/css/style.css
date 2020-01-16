@@ -101,26 +101,26 @@ i {
 .glheader__area__logoarea {
   height: 100px;
   margin-bottom: 10px;
-  width: 30%;
+  width: 35%;
 }
 
 .glheader__area__logoarea__logo img {
   text-indent: -9999px;
-  height: 75px;
+  height: 77px;
   background-size: contain;
   filter: drop-shadow(0 1px 2px #fff);
 }
 
 .glheader__area__logoarea__catch {
   color: #4b4539;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 5px;
   filter: drop-shadow(2px 0px #fff);
 }
 
 .glheader__box {
-  width: 57%;
+  width: 60%;
 }
 
 .glheader__box__topics {
@@ -154,8 +154,8 @@ i {
 }
 
 .glheader__box__topics__contact {
-  font-size: 1.2rem;
-  width: 140px;
+  font-size: 1.0rem;
+  width: 170px;
   padding: 10px 0 10px 0;
   height: 50px;
   background-color: #83b33c;
@@ -169,6 +169,10 @@ i {
   text-align: center;
 }
 
+.glheader__box__topics__contact p {
+  padding-top: 4px;
+}
+
 .glheader__box__topics__contact:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-0.1875em);
@@ -176,7 +180,7 @@ i {
 
 .glheader__box__topics__faq {
   font-size: 1.2rem;
-  width: 140px;
+  width: 150px;
   padding: 10px 0 10px 0;
   height: 50px;
   background-color: #83b33c;
@@ -376,7 +380,7 @@ i {
 }
 
 .service {
-  padding-top: 55px;
+  padding-top: 65px;
   padding-bottom: 50px;
   position: relative;
   display: block;
@@ -431,7 +435,7 @@ i {
 }
 
 .service__intro__title {
-  width: 256px;
+  width: 300px;
   height: 70px;
   font-size: 1.2rem;
   position: absolute;
@@ -448,6 +452,11 @@ i {
   align-items: center;
 }
 
+.service__intro__title img {
+  height: 45px;
+  width: auto;
+}
+
 .service__intro__title span {
   color: #fff;
   padding-left: 5px;
@@ -455,15 +464,15 @@ i {
 }
 
 .service__intro__para {
-  font-size: 1.2rem;
-  padding: 35px;
+  font-size: 1.4rem;
+  padding: 40px;
   line-height: 3.5rem;
   font-weight: bold;
   color: #4b4539;
 }
 
 .service__intro__para__span {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #F4810E;
   display: inline-block;
@@ -597,7 +606,7 @@ i {
 }
 
 .guide {
-  padding-top: 55px;
+  padding-top: 65px;
   position: relative;
   display: block;
 }
@@ -642,7 +651,7 @@ i {
 .guide__area__topics {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .guide__area__topics__topic {
@@ -742,6 +751,19 @@ i {
   color: #4b4539;
 }
 
+.guide__area__para {
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.guide__area__para p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.0rem;
+  color: #F4810E;
+}
+
 .guide__last__topic {
   margin: 0;
 }
@@ -772,7 +794,7 @@ i {
 
 .contactform {
   background-image: url("../images/pattern.png");
-  padding-top: 55px;
+  padding-top: 65px;
   position: relative;
   display: block;
   padding-bottom: 50px;
@@ -935,7 +957,7 @@ i {
 }
 
 .faq {
-  padding-top: 55px;
+  padding-top: 65px;
   padding-bottom: 100px;
   position: relative;
   display: block;
@@ -1008,7 +1030,7 @@ i {
   align-items: center;
   color: #fff;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
@@ -1016,7 +1038,7 @@ p.question {
   margin: 0 auto 0 0;
   cursor: pointer;
   padding: 40px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #4b4539;
 }
@@ -1045,7 +1067,7 @@ p.answer {
   display: none;
   margin: 0 20px 10px 20px;
   padding: 20px;
-  font-size: 1.0rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -1088,6 +1110,7 @@ p.answer {
 }
 
 .contact__area__para {
+  line-height: 2.0rem;
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.8rem;
@@ -1140,7 +1163,7 @@ p.answer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .contact__area__topics__mail__btn {
@@ -1151,6 +1174,10 @@ p.answer {
 .contact__area__topics__mail:hover {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   transform: translateY(-0.1875em);
+}
+
+.telpara {
+  font-size: 2.6rem;
 }
 
 .contact::before {
@@ -1642,7 +1669,7 @@ p.answer {
   .guide__area__topics {
     width: 100%;
     display: block;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
   }
   .guide__area__topics__topic {
     width: 92%;
@@ -1652,6 +1679,13 @@ p.answer {
   }
   .guide__area__topics__topic:last-child {
     margin-bottom: 0;
+  }
+  .guide__area__para {
+    width: 95%;
+    padding-bottom: 40px;
+  }
+  .guide__area__para p {
+    font-size: 1.2rem;
   }
   .contactform {
     padding-top: 30px;
@@ -1741,6 +1775,12 @@ p.answer {
     width: 95%;
     margin: 0 auto;
   }
+  p.question {
+    font-size: 1.2rem;
+  }
+  p.answer {
+    font-size: 1.0rem;
+  }
   .glfooter {
     height: auto;
   }
@@ -1763,9 +1803,9 @@ p.answer {
     width: 65px;
     height: 65px;
   }
-  .privacy__area {
+  .policy__area {
     width: 95%;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
