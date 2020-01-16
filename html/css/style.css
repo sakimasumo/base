@@ -1440,8 +1440,11 @@ p.answer {
     float: left;
     display: flex;
     justify-content: center;
-    font-size: 1.0rem;
+    font-size: 0.8rem;
     align-items: center;
+  }
+  .glheader__box__topics__contact p {
+    padding: 0;
   }
   .glheader__box__topics__faq {
     width: 49%;
